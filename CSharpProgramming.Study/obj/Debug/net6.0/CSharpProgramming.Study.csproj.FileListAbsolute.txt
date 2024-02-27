@@ -27,3 +27,4 @@ D:\Learning\Codes\CSharpProgramming\CSharpProgramming.Study\obj\Debug\net6.0\ref
 D:\Learning\Codes\CSharpProgramming\CSharpProgramming.Study\obj\Debug\net6.0\CSharpProgramming.Study.pdb
 D:\Learning\Codes\CSharpProgramming\CSharpProgramming.Study\obj\Debug\net6.0\CSharpProgramming.Study.genruntimeconfig.cache
 D:\Learning\Codes\CSharpProgramming\CSharpProgramming.Study\obj\Debug\net6.0\ref\CSharpProgramming.Study.dll
+D:\Learning\Codes\CSharpProgramming\CSharpProgramming.Study\obj\Debug\net6.0\CSharpProgramming.Study.sourcelink.json

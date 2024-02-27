@@ -208,3 +208,4 @@ D:\Learning\Codes\CSharpProgramming\CSharpProgramming.Tests\obj\Debug\net6.0\ref
 D:\Learning\Codes\CSharpProgramming\CSharpProgramming.Tests\obj\Debug\net6.0\CSharpProgramming.Tests.pdb
 D:\Learning\Codes\CSharpProgramming\CSharpProgramming.Tests\obj\Debug\net6.0\CSharpProgramming.Tests.genruntimeconfig.cache
 D:\Learning\Codes\CSharpProgramming\CSharpProgramming.Tests\obj\Debug\net6.0\ref\CSharpProgramming.Tests.dll
+D:\Learning\Codes\CSharpProgramming\CSharpProgramming.Tests\obj\Debug\net6.0\CSharpProgramming.Tests.sourcelink.json

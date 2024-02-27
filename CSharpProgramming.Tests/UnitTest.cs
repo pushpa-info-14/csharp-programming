@@ -1,4 +1,4 @@
-using CSharpProgramming.Study.UsingStatement;
+using CSharpProgramming.Study.General;
 
 namespace CSharpProgramming.Tests
 {

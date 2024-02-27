@@ -1,6 +1,6 @@
-using CSharpProgramming.Study.UsingStatement;
+using CSharpProgramming.Study.General;
 
-namespace CSharpProgramming.Tests.UsingStatementTest
+namespace CSharpProgramming.Tests.General
 {
     public class UsingStatementTest
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace CSharpProgramming.Study.UsingStatement
+namespace CSharpProgramming.Study.General
 {
     public static class UsingStatement
     {

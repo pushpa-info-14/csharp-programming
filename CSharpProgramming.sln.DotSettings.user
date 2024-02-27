@@ -2,5 +2,7 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4f0896bc_002D16ff_002D497f_002D822e_002D19460ea627c9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::86ADEA2E-49E6-41AA-A3EF-6AC7D180C108::net6.0::CSharpProgramming.Tests.UnitTest.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::86ADEA2E-49E6-41AA-A3EF-6AC7D180C108::net6.0::CSharpProgramming.Tests.Leetcode75.Q1TwoSumHashMapLeetcode1Test.Test1&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+&lt;/SessionState&gt;</s:String>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Leetcode/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
