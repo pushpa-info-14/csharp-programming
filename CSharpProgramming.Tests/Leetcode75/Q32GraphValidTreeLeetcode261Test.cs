@@ -1,5 +1,5 @@
 using CSharpProgramming.Study.Leetcode75;
-using Newtonsoft.Json;
+using CSharpProgramming.Tests.Utils;
 
 namespace CSharpProgramming.Tests.Leetcode75
 {
@@ -14,12 +14,7 @@ namespace CSharpProgramming.Tests.Leetcode75
         public void Test1()
         {
             var solution = new Q32GraphValidTreeLeetcode261();
-            Print(solution.GraphValidTree(5, new[] { new[] { 0, 1 }, new[] { 0, 2 }, new[] { 0, 3 }, new[] { 1, 4 } }));
-        }
-
-        private void Print(object data)
-        {
-            Console.WriteLine(JsonConvert.SerializeObject(data));
+            ConsoleLogger.Print(solution.GraphValidTree(5, new[] { new[] { 0, 1 }, new[] { 0, 2 }, new[] { 0, 3 }, new[] { 1, 4 } }));
         }
     }
 }
