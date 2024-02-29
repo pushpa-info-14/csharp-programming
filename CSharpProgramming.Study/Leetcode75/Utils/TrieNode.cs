@@ -7,6 +7,7 @@
             Children = new Dictionary<char, TrieNode>();
             IsWord = false;
         }
+
         public Dictionary<char, TrieNode> Children { get; set; }
         public bool IsWord { get; set; }
 
@@ -19,9 +20,37 @@
                 {
                     cur.Children.Add(c, new TrieNode());
                 }
+
                 cur = cur.Children[c];
             }
+
             cur.IsWord = true;
+        }
+
+        public void RemoveWord(string word)
+        {
+            var junction = this;
+            var character = ' ';
+            var cur = this;
+            foreach (var c in word)
+            {
+                if (!cur.Children.ContainsKey(c))
+                {
+                    return;
+                }
+
+                if (cur.Children.Count > 1)
+                {
+                    junction = cur;
+                    character = c;
+                }
+                cur = cur.Children[c];
+            }
+
+            if (cur.IsWord && character != ' ' && cur.Children.Count == 0)
+            {
+                junction.Children.Remove(character);
+            }
         }
 
         public bool Search(string word)
