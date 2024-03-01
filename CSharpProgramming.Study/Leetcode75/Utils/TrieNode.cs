@@ -29,7 +29,7 @@
 
         public void RemoveWord(string word)
         {
-            var junction = this;
+            var closestBranch = this;
             var character = ' ';
             var cur = this;
             foreach (var c in word)
@@ -41,15 +41,22 @@
 
                 if (cur.Children.Count > 1)
                 {
-                    junction = cur;
+                    closestBranch = cur;
                     character = c;
                 }
                 cur = cur.Children[c];
             }
 
-            if (cur.IsWord && character != ' ' && cur.Children.Count == 0)
+            if (cur.IsWord)
             {
-                junction.Children.Remove(character);
+                if (character != ' ' && cur.Children.Count == 0)
+                {
+                    closestBranch.Children.Remove(character);
+                }
+                else
+                {
+                    cur.IsWord = false;
+                }
             }
         }
 

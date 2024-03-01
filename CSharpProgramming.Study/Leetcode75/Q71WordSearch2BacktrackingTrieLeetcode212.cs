@@ -31,6 +31,7 @@ namespace CSharpProgramming.Study.Leetcode75
                 if (node.IsWord)
                 {
                     results.Add(word);
+                    root.RemoveWord(word);
                 }
 
                 DFS(r + 1, c, node, word);
