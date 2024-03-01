@@ -9,7 +9,7 @@ namespace CSharpProgramming.Study.Leetcode75
             var root = new TrieNode();
             foreach (var word in words)
             {
-                root.AddWord(word);
+                root.Insert(word);
             }
 
             var rows = board.Length;
@@ -31,7 +31,7 @@ namespace CSharpProgramming.Study.Leetcode75
                 if (node.IsWord)
                 {
                     results.Add(word);
-                    root.RemoveWord(word);
+                    root.Remove(word);
                 }
 
                 DFS(r + 1, c, node, word);

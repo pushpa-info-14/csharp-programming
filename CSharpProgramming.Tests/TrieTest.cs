@@ -14,21 +14,26 @@ namespace CSharpProgramming.Tests
         {
             var node = new TrieNode();
 
-            node.AddWord("abc");
-            node.AddWord("abcd");
-            node.AddWord("abab");
+            node.Insert("abc");
+            node.Insert("abcd");
+            node.Insert("abab");
 
             Assert.That(node.Search("abc"), Is.True);
             Assert.That(node.Search("abcd"), Is.True);
             Assert.That(node.Search("abab"), Is.True);
 
-            node.RemoveWord("abab");
+            node.Remove("abab");
             Assert.That(node.Search("abc"), Is.True);
             Assert.That(node.Search("abcd"), Is.True);
             Assert.That(node.Search("abab"), Is.False);
 
-            node.RemoveWord("abcd");
+            node.Remove("abcd");
             Assert.That(node.Search("abc"), Is.True);
+            Assert.That(node.Search("abcd"), Is.False);
+            Assert.That(node.Search("abab"), Is.False);
+
+            node.Remove("abc");
+            Assert.That(node.Search("abc"), Is.False);
             Assert.That(node.Search("abcd"), Is.False);
             Assert.That(node.Search("abab"), Is.False);
         }

@@ -2,23 +2,27 @@
 
 namespace CSharpProgramming.Study.Leetcode75
 {
-    public class Q70DesignAndSearchWordsDataStructureLeetcode211
+    public class Q69ImplementTriePrefixTreeLeetcode208
     {
         private readonly TrieNode _root;
-
-        public Q70DesignAndSearchWordsDataStructureLeetcode211()
+        public Q69ImplementTriePrefixTreeLeetcode208()
         {
             _root = new TrieNode();
         }
 
-        public void AddWord(string word)
+        public void Insert(string word)
         {
             _root.Insert(word);
         }
 
         public bool Search(string word)
         {
-            return _root.SearchWithWildcard(word, '.');
+            return _root.Search(word);
+        }
+
+        public bool StartsWith(string prefix)
+        {
+            return _root.StartsWith(prefix);
         }
     }
 }

@@ -2,16 +2,16 @@
 {
     public class TrieNode
     {
+        public Dictionary<char, TrieNode> Children { get; set; }
+        public bool IsWord { get; set; }
+
         public TrieNode()
         {
             Children = new Dictionary<char, TrieNode>();
             IsWord = false;
         }
 
-        public Dictionary<char, TrieNode> Children { get; set; }
-        public bool IsWord { get; set; }
-
-        public void AddWord(string word)
+        public void Insert(string word)
         {
             var cur = this;
             foreach (var c in word)
@@ -27,7 +27,7 @@
             cur.IsWord = true;
         }
 
-        public void RemoveWord(string word)
+        public void Remove(string word)
         {
             var closestBranch = this;
             var character = ' ';
@@ -62,6 +62,38 @@
 
         public bool Search(string word)
         {
+            var cur = this;
+            foreach (var c in word)
+            {
+                if (!cur.Children.ContainsKey(c))
+                {
+                    return false;
+                }
+
+                cur = cur.Children[c];
+            }
+
+            return cur.IsWord;
+        }
+
+        public bool StartsWith(string prefix)
+        {
+            var cur = this;
+            foreach (var c in prefix)
+            {
+                if (!cur.Children.ContainsKey(c))
+                {
+                    return false;
+                }
+
+                cur = cur.Children[c];
+            }
+
+            return true;
+        }
+
+        public bool SearchWithWildcard(string word, char wildcard)
+        {
             bool DFS(int index, TrieNode node)
             {
                 var cur = node;
@@ -69,7 +101,7 @@
                 for (var i = index; i < word.Length; i++)
                 {
                     var c = word[i];
-                    if (c == '.')
+                    if (c == wildcard)
                     {
                         return cur.Children.Values.Any(child => DFS(i + 1, child));
                     }
