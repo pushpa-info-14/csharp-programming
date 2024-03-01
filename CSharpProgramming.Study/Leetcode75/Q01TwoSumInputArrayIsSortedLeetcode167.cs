@@ -1,6 +1,6 @@
 ﻿namespace CSharpProgramming.Study.Leetcode75
 {
-    public class Q1TwoSumInputArrayIsSortedLeetcode167
+    public class Q01TwoSumInputArrayIsSortedLeetcode167
     {
         public int[] TwoSum(int[] numbers, int target)
         {
