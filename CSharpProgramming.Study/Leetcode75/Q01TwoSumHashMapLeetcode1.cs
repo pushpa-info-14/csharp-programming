@@ -1,6 +1,6 @@
 ﻿namespace CSharpProgramming.Study.Leetcode75
 {
-    public class Q1TwoSumHashMapLeetcode1
+    public class Q01TwoSumHashMapLeetcode1
     {
         public int[] TwoSum(int[] nums, int target)
         {
