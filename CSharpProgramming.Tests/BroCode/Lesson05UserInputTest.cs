@@ -9,12 +9,13 @@ namespace CSharpProgramming.Tests.BroCode
         {
         }
 
-        [Test]
-        public void Test1()
+        [TestCase("Pushpa\n30")]
+        [TestCase("Kumara\n35")]
+        public void Test1(string input)
         {
             var lesson = new Lesson05UserInput();
 
-            using var sr = new StringReader("Pushpa\n30");
+            using var sr = new StringReader(input);
             Console.SetIn(sr);
             lesson.Method1();
         }

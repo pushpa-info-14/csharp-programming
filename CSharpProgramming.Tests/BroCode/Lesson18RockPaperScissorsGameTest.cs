@@ -9,10 +9,17 @@ namespace CSharpProgramming.Tests.BroCode
         {
         }
 
-        [Test]
-        public void Test1()
+        [TestCase("ROCK")]
+        [TestCase("ROCK\nY\nPAPER")]
+        [TestCase("ROCK\nY\nPAPER\nY\nSCISSORS")]
+        [TestCase("ROCK\nY\nPAPER\nY\nSCISSORS\nY\nPAPER")]
+        public void Test1(string input)
         {
             var lesson = new Lesson18RockPaperScissorsGame();
+
+            using var sr = new StringReader(input);
+            Console.SetIn(sr);
+
             lesson.Method1();
         }
     }
