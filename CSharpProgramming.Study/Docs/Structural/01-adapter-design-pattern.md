@@ -1,1 +1,1 @@
-# Factory Design Pattern
+# Adapter Design Pattern

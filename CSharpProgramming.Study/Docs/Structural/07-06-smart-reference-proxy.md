@@ -1,1 +1,1 @@
-# Singleton vs Static Class
+# Smart Reference Proxy

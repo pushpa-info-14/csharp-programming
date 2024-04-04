@@ -1,1 +1,1 @@
-# Prototype Design Pattern
+# Flyweight Design Pattern

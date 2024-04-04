@@ -1,1 +1,1 @@
-# Thread-Safe Singleton Design Pattern
+# Cache Proxy

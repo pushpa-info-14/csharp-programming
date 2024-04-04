@@ -1,1 +1,1 @@
-# Why Singleton Class is Sealed ?
+# Remote Proxy
