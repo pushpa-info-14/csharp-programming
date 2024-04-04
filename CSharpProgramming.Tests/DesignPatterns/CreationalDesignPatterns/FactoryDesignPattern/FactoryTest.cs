@@ -1,4 +1,5 @@
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.ASimpleSystemToHandleNotifications;
+using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.DesigningASystemForABank;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.DevelopingAGraphicsEditor;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.DiscountsInAnECommerceApplication;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.DocumentConversionSystem;
@@ -47,7 +48,9 @@ namespace CSharpProgramming.Tests.DesignPatterns.CreationalDesignPatterns.Factor
             Console.WriteLine("\n---- Shape");
             new ShapeProgram().Test();
 
-            Console.WriteLine("\n----");
+            Console.WriteLine("\n---- Account");
+            new AccountProgram().Test();
+
             Console.WriteLine("\n----");
             Console.WriteLine("\n----");
             Console.WriteLine("\n----");

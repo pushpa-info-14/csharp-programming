@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DesignPatterns\CreationalDesignPatterns\FactoryDesignPattern\Examples\DesigningASysytemForABank\" />
     <Folder Include="DesignPatterns\CreationalDesignPatterns\FactoryDesignPattern\Examples\CloudStorageSystem\" />
     <Folder Include="DesignPatterns\CreationalDesignPatterns\FactoryDesignPattern\Examples\UIThemeSystem\" />
     <Folder Include="DesignPatterns\CreationalDesignPatterns\FactoryDesignPattern\Examples\ReportGeneration\" />
