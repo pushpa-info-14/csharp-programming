@@ -8,9 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DesignPatterns\CreationalDesignPatterns\FactoryDesignPattern\Examples\LoggingSystem\" />
-    <Folder Include="DesignPatterns\CreationalDesignPatterns\FactoryDesignPattern\Examples\ASimpleSystemToHandleNotifications\" />
-    <Folder Include="DesignPatterns\CreationalDesignPatterns\FactoryDesignPattern\Examples\DiscountsInAnECommerceApplication\" />
     <Folder Include="DesignPatterns\CreationalDesignPatterns\FactoryDesignPattern\Examples\DevelopingAGraphicsEditor\" />
     <Folder Include="DesignPatterns\CreationalDesignPatterns\FactoryDesignPattern\Examples\DesigningASysytemForABank\" />
     <Folder Include="DesignPatterns\CreationalDesignPatterns\FactoryDesignPattern\Examples\CloudStorageSystem\" />
