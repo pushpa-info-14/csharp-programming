@@ -12,7 +12,7 @@ using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples.UITheme
 using CSharpProgramming.Study.DesignPatterns.Creational.Factory.With;
 using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Without;
 
-namespace CSharpProgramming.Tests.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern
+namespace CSharpProgramming.Tests.DesignPatterns.Creational.Factory
 {
     public class FactoryTest
     {

@@ -7,4 +7,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="DesignPatterns\Creational\FactoryMethod\Examples\DocumentFormatConverter\" />
+    <Folder Include="DesignPatterns\Creational\FactoryMethod\Examples\LogisticApplication\" />
+    <Folder Include="DesignPatterns\Creational\FactoryMethod\Examples\PaymentGatewayIntegration\" />
+    <Folder Include="DesignPatterns\Creational\FactoryMethod\Examples\ReportGenerator\" />
+  </ItemGroup>
+
 </Project>
