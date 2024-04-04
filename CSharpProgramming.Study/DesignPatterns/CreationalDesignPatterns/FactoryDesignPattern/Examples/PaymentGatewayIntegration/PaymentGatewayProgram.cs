@@ -4,19 +4,14 @@
     {
         public void Test()
         {
-            Console.WriteLine("Select the payment gateway (PayPal, Stripe, CreditCard): ");
-            var paymentGateways = new string[] { "PayPal", "Stripe", "CreditCard" };
-            var gatewayName = paymentGateways[new Random().Next(0, paymentGateways.Length)];
+            var paymentGateway = PaymentGatewayFactory.CreatePaymentGateway("PayPal");
+            paymentGateway.ProcessPayment(100.00M);  // Example amount
 
-            try
-            {
-                IPaymentGateway paymentGateway = PaymentGatewayFactory.CreatePaymentGateway(gatewayName);
-                paymentGateway.ProcessPayment(100.00M);  // Example amount
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            paymentGateway = PaymentGatewayFactory.CreatePaymentGateway("Stripe");
+            paymentGateway.ProcessPayment(100.00M);  // Example amount
+
+            paymentGateway = PaymentGatewayFactory.CreatePaymentGateway("CreditCard");
+            paymentGateway.ProcessPayment(100.00M);  // Example amount
         }
     }
 }

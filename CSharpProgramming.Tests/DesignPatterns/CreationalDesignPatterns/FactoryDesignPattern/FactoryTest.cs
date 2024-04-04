@@ -1,8 +1,10 @@
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.ASimpleSystemToHandleNotifications;
+using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.DevelopingAGraphicsEditor;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.DiscountsInAnECommerceApplication;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.DocumentConversionSystem;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.LoggingSystem;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.PaymentGatewayIntegration;
+using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.TransportApplication;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.With;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Without;
 
@@ -39,8 +41,12 @@ namespace CSharpProgramming.Tests.DesignPatterns.CreationalDesignPatterns.Factor
             Console.WriteLine("\n---- Discount");
             new DiscountProgram().Test();
 
-            Console.WriteLine("\n----");
-            Console.WriteLine("\n----");
+            Console.WriteLine("\n---- Transport");
+            new TransportProgram().Test();
+
+            Console.WriteLine("\n---- Shape");
+            new ShapeProgram().Test();
+
             Console.WriteLine("\n----");
             Console.WriteLine("\n----");
             Console.WriteLine("\n----");
