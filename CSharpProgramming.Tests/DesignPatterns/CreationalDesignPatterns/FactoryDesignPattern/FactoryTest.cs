@@ -8,6 +8,7 @@ using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDes
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.PaymentGatewayIntegration;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.ReportGeneration;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.TransportApplication;
+using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.UIThemeSystem;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.With;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Without;
 
@@ -59,7 +60,8 @@ namespace CSharpProgramming.Tests.DesignPatterns.CreationalDesignPatterns.Factor
             Console.WriteLine("\n---- StorageProvider");
             new StorageProviderProgram().Test();
 
-            Console.WriteLine("\n----");
+            Console.WriteLine("\n---- Theme");
+            new ThemeProgram().Test();
         }
     }
 }
