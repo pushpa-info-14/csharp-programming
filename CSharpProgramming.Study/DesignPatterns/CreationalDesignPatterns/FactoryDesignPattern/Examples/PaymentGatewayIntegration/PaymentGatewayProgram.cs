@@ -1,6 +1,6 @@
 ﻿namespace CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.PaymentGatewayIntegration
 {
-    public class PaymentGatewayIntegrationProgram
+    public class PaymentGatewayProgram
     {
         public void Test()
         {

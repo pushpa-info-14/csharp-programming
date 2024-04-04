@@ -1,3 +1,4 @@
+using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.DocumentConversionSystem;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.PaymentGatewayIntegration;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.With;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Without;
@@ -16,7 +17,8 @@ namespace CSharpProgramming.Tests.DesignPatterns.CreationalDesignPatterns.Factor
         {
             new WithoutFactoryProgram().Test();
             new FactoryProgram().Test();
-            new PaymentGatewayIntegrationProgram().Test();
+            new PaymentGatewayProgram().Test();
+            new DocumentConverterProgram().Test();
         }
     }
 }
