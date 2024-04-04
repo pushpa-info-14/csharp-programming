@@ -1,0 +1,1 @@
+# Singleton vs Static Class
