@@ -1,10 +1,12 @@
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.ASimpleSystemToHandleNotifications;
+using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.CloudStorageSystem;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.DesigningASystemForABank;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.DevelopingAGraphicsEditor;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.DiscountsInAnECommerceApplication;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.DocumentConversionSystem;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.LoggingSystem;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.PaymentGatewayIntegration;
+using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.ReportGeneration;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Examples.TransportApplication;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.With;
 using CSharpProgramming.Study.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.Without;
@@ -51,8 +53,12 @@ namespace CSharpProgramming.Tests.DesignPatterns.CreationalDesignPatterns.Factor
             Console.WriteLine("\n---- Account");
             new AccountProgram().Test();
 
-            Console.WriteLine("\n----");
-            Console.WriteLine("\n----");
+            Console.WriteLine("\n---- Report");
+            new ReportProgram().Test();
+
+            Console.WriteLine("\n---- StorageProvider");
+            new StorageProviderProgram().Test();
+
             Console.WriteLine("\n----");
         }
     }
