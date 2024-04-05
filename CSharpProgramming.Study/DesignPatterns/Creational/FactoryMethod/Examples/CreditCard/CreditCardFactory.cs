@@ -1,4 +1,4 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod
+﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.CreditCard
 {
     // The CreditCardFactory Creator class declares the factory method 
     // that is going to return an object of a Product class. 
@@ -11,7 +11,7 @@
         public ICreditCard CreateProduct()
         {
             // Call the MakeProduct which will create and return the appropriate object 
-            ICreditCard creditCard = this.MakeProduct();
+            ICreditCard creditCard = MakeProduct();
             // Return the Object to the Client
             return creditCard;
         }

@@ -1,4 +1,4 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod
+﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.CreditCard
 {
     // PlatinumFactory Concrete Creators override the factory MakeProduct method
     // to create and return the Platinum Product

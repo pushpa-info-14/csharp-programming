@@ -1,6 +1,4 @@
-
-
-using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod;
+using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.CreditCard;
 using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.DocumentFormatConverter;
 using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.LogisticApplication;
 using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.NotificationSystem;

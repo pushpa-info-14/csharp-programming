@@ -1,4 +1,4 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod
+﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.CreditCard
 {
     public interface ICreditCard
     {
