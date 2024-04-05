@@ -51,6 +51,7 @@
       &lt;TestId&gt;NUnit3x::86ADEA2E-49E6-41AA-A3EF-6AC7D180C108::net6.0::CSharpProgramming.Tests.General.SampleQueueTest.Test1&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::86ADEA2E-49E6-41AA-A3EF-6AC7D180C108::net6.0::CSharpProgramming.Tests.DesignPatterns.CreationalDesignPatterns.FactoryDesignPattern.FactoryTest.Test1&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::86ADEA2E-49E6-41AA-A3EF-6AC7D180C108::net6.0::CSharpProgramming.Tests.DesignPatterns.Creational.FactoryMethod.FactoryMethodTest.Test1&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::86ADEA2E-49E6-41AA-A3EF-6AC7D180C108::net6.0::CSharpProgramming.Tests.DesignPatterns.Creational.AbstractFactory.AbstractFactoryTest.Test1&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
     &lt;ProjectFolder&gt;86ADEA2E-49E6-41AA-A3EF-6AC7D180C108/d:Leetcode75&lt;/ProjectFolder&gt;&#xD;
   &lt;/Or&gt;&#xD;
