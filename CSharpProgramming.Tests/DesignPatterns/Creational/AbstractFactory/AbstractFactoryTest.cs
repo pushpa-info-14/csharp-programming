@@ -1,4 +1,5 @@
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.AnimalKingdoms;
+using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.Beverages;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformApplicationConfiguration;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformUIDevelopment;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.DatabaseManager;
@@ -54,6 +55,9 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.AbstractFactory
 
             Console.WriteLine("\n---- MediaApplication");
             new MediaApplicationProgram().Test();
+
+            Console.WriteLine("\n---- BeverageMaker");
+            new BeverageMakerProgram().Test();
         }
     }
 }
