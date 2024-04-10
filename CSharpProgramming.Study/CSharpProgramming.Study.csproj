@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DesignPatterns\Creational\AbstractFactory\Examples\AnimalKingdoms\" />
     <Folder Include="DesignPatterns\Creational\AbstractFactory\Examples\MultimediaSoftware\" />
     <Folder Include="DesignPatterns\Creational\AbstractFactory\Examples\Beverages\" />
   </ItemGroup>

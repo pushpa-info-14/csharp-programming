@@ -1,3 +1,4 @@
+using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.AnimalKingdoms;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformApplicationConfiguration;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformUIDevelopment;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.DatabaseManager;
@@ -46,6 +47,9 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.AbstractFactory
 
             Console.WriteLine("\n---- UserInterface");
             new UserInterfaceProgram().Test();
+
+            Console.WriteLine("\n---- Ecosystem");
+            new EcosystemProgram().Test();
         }
     }
 }
