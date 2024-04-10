@@ -1,5 +1,7 @@
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.Institution;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.VehicleFactory;
+using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformUIDevelopment;
+using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.PaymentGatewaysInECommerce;
+using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Institution;
+using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.VehicleFactory;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.AbstractFactory
 {
@@ -18,6 +20,12 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.AbstractFactory
 
             Console.WriteLine("\n---- Institution");
             new InstitutionProgram().Test();
+
+            Console.WriteLine("\n---- PaymentProcessor");
+            new PaymentProcessorProgram().Test();
+
+            Console.WriteLine("\n---- CrossPlatformApplication");
+            new CrossPlatformApplicationProgram().Test();
         }
     }
 }

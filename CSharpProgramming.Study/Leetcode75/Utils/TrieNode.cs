@@ -94,7 +94,7 @@
 
         public bool SearchWithWildcard(string word, char wildcard)
         {
-            bool DFS(int index, TrieNode node)
+            bool Dfs(int index, TrieNode node)
             {
                 var cur = node;
 
@@ -103,7 +103,7 @@
                     var c = word[i];
                     if (c == wildcard)
                     {
-                        return cur.Children.Values.Any(child => DFS(i + 1, child));
+                        return cur.Children.Values.Any(child => Dfs(i + 1, child));
                     }
                     else
                     {
@@ -119,7 +119,7 @@
                 return cur.IsWord;
             }
 
-            return DFS(0, this);
+            return Dfs(0, this);
         }
     }
 }

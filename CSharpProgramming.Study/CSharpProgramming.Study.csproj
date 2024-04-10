@@ -7,4 +7,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="DesignPatterns\Creational\AbstractFactory\Examples\CrossPlatformApplicationConfiguration\" />
+    <Folder Include="DesignPatterns\Creational\AbstractFactory\Examples\FurnitureShop\" />
+    <Folder Include="DesignPatterns\Creational\AbstractFactory\Examples\ManagingConnectionsToDifferentTypesOfDatabases\" />
+    <Folder Include="DesignPatterns\Creational\AbstractFactory\Examples\MultiDeviceUserInterface\" />
+    <Folder Include="DesignPatterns\Creational\AbstractFactory\Examples\AnimalKingdoms\" />
+    <Folder Include="DesignPatterns\Creational\AbstractFactory\Examples\MultimediaSoftware\" />
+    <Folder Include="DesignPatterns\Creational\AbstractFactory\Examples\Beverages\" />
+    <Folder Include="DesignPatterns\Creational\AbstractFactory\Examples\VehicleManufacturingCompany\" />
+  </ItemGroup>
+
 </Project>

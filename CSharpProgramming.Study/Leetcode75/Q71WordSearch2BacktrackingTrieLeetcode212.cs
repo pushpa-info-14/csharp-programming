@@ -17,7 +17,7 @@ namespace CSharpProgramming.Study.Leetcode75
             var results = new HashSet<string>();
             var visited = new HashSet<Tuple<int, int>>();
 
-            void DFS(int r, int c, TrieNode node, string word)
+            void Dfs(int r, int c, TrieNode node, string word)
             {
                 if (r < 0 || c < 0 || r == rows || c == cols || !node.Children.ContainsKey(board[r][c]) || visited.Contains(new Tuple<int, int>(r, c)))
                 {
@@ -34,10 +34,10 @@ namespace CSharpProgramming.Study.Leetcode75
                     root.Remove(word);
                 }
 
-                DFS(r + 1, c, node, word);
-                DFS(r - 1, c, node, word);
-                DFS(r, c + 1, node, word);
-                DFS(r, c - 1, node, word);
+                Dfs(r + 1, c, node, word);
+                Dfs(r - 1, c, node, word);
+                Dfs(r, c + 1, node, word);
+                Dfs(r, c - 1, node, word);
                 visited.Remove(new Tuple<int, int>(r, c));
             }
 
@@ -45,7 +45,7 @@ namespace CSharpProgramming.Study.Leetcode75
             {
                 for (var c = 0; c < cols; c++)
                 {
-                    DFS(r, c, root, "");
+                    Dfs(r, c, root, "");
                 }
             }
 

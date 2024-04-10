@@ -23,7 +23,7 @@
 
             var visited = new HashSet<int>();
 
-            bool DFS(int i, int previous)
+            bool Dfs(int i, int previous)
             {
                 if (visited.Contains(i))
                 {
@@ -35,7 +35,7 @@
                 {
                     if (j == previous) continue;
 
-                    if (!DFS(j, i))
+                    if (!Dfs(j, i))
                     {
                         return false;
                     }
@@ -43,7 +43,7 @@
                 return true;
             }
 
-            return DFS(0, -1) && visited.Count == n;
+            return Dfs(0, -1) && visited.Count == n;
         }
     }
 }
