@@ -1,5 +1,6 @@
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformApplicationConfiguration;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformUIDevelopment;
+using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.FurnitureShop;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.PaymentGatewaysInECommerce;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.VehicleManufacturingCompany;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Institution;
@@ -34,6 +35,9 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.AbstractFactory
 
             Console.WriteLine("\n---- ApplicationConfigurator");
             new ApplicationConfiguratorProgram().Test();
+
+            Console.WriteLine("\n---- FurnitureShop");
+            new FurnitureShopProgram().Test();
         }
     }
 }
