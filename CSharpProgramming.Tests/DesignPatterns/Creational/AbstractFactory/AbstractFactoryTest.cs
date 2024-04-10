@@ -1,5 +1,6 @@
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformUIDevelopment;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.PaymentGatewaysInECommerce;
+using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.VehicleManufacturingCompany;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Institution;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.VehicleFactory;
 
@@ -26,6 +27,9 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.AbstractFactory
 
             Console.WriteLine("\n---- CrossPlatformApplication");
             new CrossPlatformApplicationProgram().Test();
+
+            Console.WriteLine("\n---- VehicleManufacturingPlant");
+            new VehicleManufacturingPlantProgram().Test();
         }
     }
 }
