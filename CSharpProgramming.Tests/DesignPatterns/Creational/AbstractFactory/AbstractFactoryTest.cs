@@ -2,6 +2,7 @@ using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformUIDevelopment;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.DatabaseManager;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.FurnitureShop;
+using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.MultiDeviceUserInterface;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.PaymentGatewaysInECommerce;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.VehicleManufacturingCompany;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Institution;
@@ -42,6 +43,9 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.AbstractFactory
 
             Console.WriteLine("\n---- DatabaseManager");
             new DatabaseManagerProgram().Test();
+
+            Console.WriteLine("\n---- UserInterface");
+            new UserInterfaceProgram().Test();
         }
     }
 }
