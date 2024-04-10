@@ -1,3 +1,4 @@
+using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformApplicationConfiguration;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformUIDevelopment;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.PaymentGatewaysInECommerce;
 using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.VehicleManufacturingCompany;
@@ -30,6 +31,9 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.AbstractFactory
 
             Console.WriteLine("\n---- VehicleManufacturingPlant");
             new VehicleManufacturingPlantProgram().Test();
+
+            Console.WriteLine("\n---- ApplicationConfigurator");
+            new ApplicationConfiguratorProgram().Test();
         }
     }
 }
