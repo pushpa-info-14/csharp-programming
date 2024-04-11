@@ -7,4 +7,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="DesignPatterns\Creational\FluentInterface\Examples\AutomapperImplementationUsingFluentInterface\" />
+    <Folder Include="DesignPatterns\Creational\FluentInterface\Examples\FluentValidation\" />
+    <Folder Include="DesignPatterns\Creational\FluentInterface\Examples\FluentSqlQueryBuilder\" />
+    <Folder Include="DesignPatterns\Creational\FluentInterface\Examples\FluentHtmlTagBuilder\" />
+    <Folder Include="DesignPatterns\Creational\FluentInterface\Examples\FluentShoppingCartBuilder\" />
+    <Folder Include="DesignPatterns\Creational\FluentInterface\Examples\FluentUserProfileBuilder\" />
+    <Folder Include="DesignPatterns\Creational\FluentInterface\Examples\FluentGameCharacterBuilder\" />
+    <Folder Include="DesignPatterns\Creational\FluentInterface\Examples\FluentPizzaBuilder\" />
+    <Folder Include="DesignPatterns\Creational\FluentInterface\Examples\EntityFrameworkCodeFirstModelPropertiesConfiguration\" />
+    <Folder Include="DesignPatterns\Creational\FluentInterface\Examples\FluentEmailBuilder\" />
+    <Folder Include="DesignPatterns\Creational\FluentInterface\Examples\RestSharpForApiRequests\" />
+  </ItemGroup>
+
 </Project>
