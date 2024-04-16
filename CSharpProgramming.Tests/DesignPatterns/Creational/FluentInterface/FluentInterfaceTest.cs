@@ -1,5 +1,10 @@
+using CSharpProgramming.Study.DesignPatterns.Creational.Builder.Examples.CreatingComplexProfileObjectsForAUserRegistrationSystem;
 using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.AutoMapperImplementationUsingFluentInterface;
+using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.EntityFrameworkCodeFirstModelPropertiesConfiguration;
+using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentEmailBuilder;
+using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentGameCharacterBuilder;
 using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentHtmlTagBuilder;
+using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentPizzaBuilder;
 using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentShoppingCartBuilder;
 using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentSqlQueryBuilder;
 using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentValidation;
@@ -38,6 +43,21 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.FluentInterface
 
             Console.WriteLine("\n---- ShoppingCartBuilder");
             new ShoppingCartBuilderProgram().Test();
+
+            Console.WriteLine("\n---- UserProfileBuilder");
+            new UserProfileBuilderProgram().Test();
+
+            Console.WriteLine("\n---- GameCharacterBuilder");
+            new GameCharacterBuilderProgram().Test();
+
+            Console.WriteLine("\n---- PizzaBuilder");
+            new PizzaBuilderProgram().Test();
+
+            Console.WriteLine("\n---- EntityFramework");
+            new EntityFrameworkProgram().Test();
+
+            Console.WriteLine("\n---- EmailBuilder");
+            new EmailBuilderProgram().Test();
         }
     }
 }
