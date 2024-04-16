@@ -1,3 +1,5 @@
+using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.AutoMapperImplementationUsingFluentInterface;
+using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentValidation;
 using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.FluentEmployee;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.FluentInterface
@@ -14,6 +16,12 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.FluentInterface
         {
             Console.WriteLine("\n---- FluentEmployee");
             new FluentEmployeeProgram().Test();
+
+            Console.WriteLine("\n---- AutoMapper");
+            new AutoMapperProgram().Test();
+
+            Console.WriteLine("\n---- FluentValidation");
+            new FluentValidationProgram().Test();
         }
     }
 }

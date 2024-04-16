@@ -2,34 +2,34 @@
 
 public class FluentEmployee
 {
-    private Employee employee = new();
+    private readonly Employee _employee = new();
 
     public FluentEmployee NameOfTheEmployee(string fullName)
     {
-        employee.FullName = fullName;
+        _employee.FullName = fullName;
         return this;
     }
 
     public FluentEmployee Born(string dateOfBirth)
     {
-        employee.DateOfBirth = Convert.ToDateTime(dateOfBirth);
+        _employee.DateOfBirth = Convert.ToDateTime(dateOfBirth);
         return this;
     }
 
     public FluentEmployee WorkingOn(string department)
     {
-        employee.Department = department;
+        _employee.Department = department;
         return this;
     }
 
     public FluentEmployee StaysAt(string address)
     {
-        employee.Address = address;
+        _employee.Address = address;
         return this;
     }
 
     public void ShowDetails()
     {
-        Console.WriteLine($"Name: {employee.FullName}, \nDateOfBirth: {employee.DateOfBirth}, \nDepartment: {employee.Department}, \nAddress: {employee.Address}");
+        Console.WriteLine($"Name: {_employee.FullName}, \nDateOfBirth: {_employee.DateOfBirth}, \nDepartment: {_employee.Department}, \nAddress: {_employee.Address}");
     }
 }
