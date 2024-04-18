@@ -20,7 +20,7 @@
             {
                 // Using MemberwiseClone for simplicity, which is a shallow copy.
                 // For complex objects, you might need to implement a deep copy.
-                return (ICarPrototype)this.MemberwiseClone();
+                return (ICarPrototype)MemberwiseClone();
             }
 
             public override string ToString()

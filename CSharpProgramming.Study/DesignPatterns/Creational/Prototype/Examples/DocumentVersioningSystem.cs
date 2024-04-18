@@ -18,8 +18,8 @@
             {
                 return new Document
                 {
-                    Title = this.Title,
-                    Content = this.Content
+                    Title = Title,
+                    Content = Content
                 };
             }
 

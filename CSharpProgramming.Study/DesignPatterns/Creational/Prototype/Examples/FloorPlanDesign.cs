@@ -19,7 +19,7 @@
             public IRoomPrototype Clone()
             {
                 // Using MemberwiseClone for simplicity, which is a shallow copy.
-                return (IRoomPrototype)this.MemberwiseClone();
+                return (IRoomPrototype)MemberwiseClone();
             }
 
             public override string ToString()

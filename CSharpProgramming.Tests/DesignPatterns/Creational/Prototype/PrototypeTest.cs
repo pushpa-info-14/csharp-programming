@@ -33,6 +33,27 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.Prototype
 
             Console.WriteLine("\n---- DocumentVersioningSystem");
             new DocumentVersioningSystem().Test();
+
+            Console.WriteLine("\n---- EventManagement");
+            new EventManagement().Test();
+
+            Console.WriteLine("\n---- UserCustomizableGuiSystem");
+            new UserCustomizableGuiSystem().Test();
+
+            Console.WriteLine("\n---- GraphicsEditors");
+            new GraphicsEditors().Test();
+
+            Console.WriteLine("\n---- DatabaseRecordDuplication");
+            new DatabaseRecordDuplication().Test();
+
+            Console.WriteLine("\n---- GameDevelopment");
+            new GameDevelopment().Test();
+
+            Console.WriteLine("\n---- ConfigurationTemplates");
+            new ConfigurationTemplates().Test();
+
+            Console.WriteLine("\n---- HistoricalStatesForUndoActions");
+            new HistoricalStatesForUndoActions().Test();
         }
     }
 }

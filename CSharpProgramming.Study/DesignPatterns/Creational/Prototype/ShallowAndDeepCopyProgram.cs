@@ -11,14 +11,14 @@
             // Creating a Clone Object of the Current Object using Shallow Copy
             public Employee GetShallowCopy()
             {
-                Employee employee = (Employee)MemberwiseClone();
+                var employee = (Employee)MemberwiseClone();
                 return employee;
             }
 
             // Creating a Clone Object of the Current Object using Deep Copy
             public Employee GetDeepCopy()
             {
-                Employee employee = (Employee)MemberwiseClone();
+                var employee = (Employee)MemberwiseClone();
                 employee.EmpAddress = EmpAddress.GetClone();
                 return employee;
             }
@@ -37,7 +37,7 @@
         {
             // Example to Understand Deep Copy and Shallow Copy in C#
             // Creating Employee Object
-            Employee emp1 = new Employee
+            var emp1 = new Employee
             {
                 Name = "Anurag",
                 Department = "IT",
@@ -45,7 +45,7 @@
             };
 
             // Creating a Clone Object from the Existing Object using the GetDeepCopy method
-            Employee emp2 = emp1.GetDeepCopy();
+            var emp2 = emp1.GetDeepCopy();
 
             // Changing Name and Address Property of Clone Object
             emp2.Name = "Pranaya";
@@ -56,7 +56,7 @@
             Console.WriteLine($" Employee 2: Name: {emp2.Name}, Address: {emp2.EmpAddress.AddressLine1}");
 
             // Creating Employee Object
-            Employee emp3 = new Employee
+            var emp3 = new Employee
             {
                 Name = "Sambit",
                 Department = "HR",
@@ -64,7 +64,7 @@
             };
 
             // Creating a Clone Object from the Existing Object using the GetShallowCopy method
-            Employee emp4 = emp3.GetShallowCopy();
+            var emp4 = emp3.GetShallowCopy();
 
             //Changing Name and Address Property of Clone Object
             emp4.Name = "Hina";

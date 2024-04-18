@@ -19,7 +19,7 @@
                 // MemberwiseClone Method Creates a shallow copy of the current System.Object
                 // So typecast the Object Appropriate Type
                 // In this case, typecast to PermanentEmployee type
-                return (PermanentEmployee)this.MemberwiseClone();
+                return (PermanentEmployee)MemberwiseClone();
             }
             public override void ShowDetails()
             {
@@ -36,12 +36,12 @@
                 // MemberwiseClone Method Creates a shallow copy of the current System.Object
                 // So typecast the Object Appropriate Type
                 // In this case, typecast to TemporaryEmployee type
-                return (TemporaryEmployee)this.MemberwiseClone();
+                return (TemporaryEmployee)MemberwiseClone();
             }
             public override void ShowDetails()
             {
                 Console.WriteLine("Temporary Employee");
-                Console.WriteLine($" Name:{this.Name}, Department: {this.Department}, Type:{this.Type}, FixedAmount: {this.FixedAmount}\n");
+                Console.WriteLine($" Name:{Name}, Department: {Department}, Type:{Type}, FixedAmount: {FixedAmount}\n");
             }
         }
 
