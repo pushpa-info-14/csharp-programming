@@ -14,4 +14,15 @@
     <PackageReference Include="RestSharp" Version="110.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DesignPatterns\Creational\Prototype\Examples\DocumentVersioningSystem\" />
+    <Folder Include="DesignPatterns\Creational\Prototype\Examples\EventManagement\" />
+    <Folder Include="DesignPatterns\Creational\Prototype\Examples\GraphicEditors\" />
+    <Folder Include="DesignPatterns\Creational\Prototype\Examples\DatabaseRecordDuplication\" />
+    <Folder Include="DesignPatterns\Creational\Prototype\Examples\GameDevelopment\" />
+    <Folder Include="DesignPatterns\Creational\Prototype\Examples\ConfigurationTemplates\" />
+    <Folder Include="DesignPatterns\Creational\Prototype\Examples\HistoricalStatesForUndoActions\" />
+    <Folder Include="DesignPatterns\Creational\Prototype\Examples\UserCustomizableGuiSystem\" />
+  </ItemGroup>
+
 </Project>

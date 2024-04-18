@@ -1,5 +1,5 @@
 using CSharpProgramming.Study.DesignPatterns.Creational.Prototype;
-using CSharpProgramming.Study.DesignPatterns.Creational.Prototype.Employee;
+using CSharpProgramming.Study.DesignPatterns.Creational.Prototype.Examples;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.Prototype
 {
@@ -13,14 +13,26 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.Prototype
         [Test]
         public void Test1()
         {
-            Console.WriteLine("\n---- Example1");
-            new Example1().Test();
+            Console.WriteLine("\n---- ObjectAssignmentExample");
+            new ObjectAssignmentExample().Test();
 
-            Console.WriteLine("\n---- Example2");
-            new Example2().Test();
+            Console.WriteLine("\n---- ShallowCopyExample");
+            new ShallowCopyExample().Test();
 
-            Console.WriteLine("\n---- Employee");
+            Console.WriteLine("\n---- EmployeeProgram");
             new EmployeeProgram().Test();
+
+            Console.WriteLine("\n---- ShallowAndDeepCopyProgram");
+            new ShallowAndDeepCopyProgram().Test();
+
+            Console.WriteLine("\n---- CarConfiguratorApplication");
+            new CarConfiguratorApplication().Test();
+
+            Console.WriteLine("\n---- FloorPlanDesign");
+            new FloorPlanDesign().Test();
+
+            Console.WriteLine("\n---- DocumentVersioningSystem");
+            new DocumentVersioningSystem().Test();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.Prototype
 {
-    public class Example2
+    public class ShallowCopyExample
     {
         public void Test()
         {
@@ -23,7 +23,7 @@
             Console.WriteLine("Name: " + emp2.Name + ", Department: " + emp2.Department);
         }
 
-        class Employee
+        private class Employee
         {
             public string Name { get; set; }
             public string Department { get; set; }
