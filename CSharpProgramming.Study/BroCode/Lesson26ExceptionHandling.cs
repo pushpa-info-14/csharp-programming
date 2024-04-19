@@ -22,11 +22,11 @@
 
                 Console.WriteLine("Result: " + result);
             }
-            catch (FormatException e)
+            catch (FormatException)
             {
                 Console.WriteLine("Enter only numbers");
             }
-            catch (DivideByZeroException e)
+            catch (DivideByZeroException)
             {
                 Console.WriteLine("You cannot divide by zero!");
             }

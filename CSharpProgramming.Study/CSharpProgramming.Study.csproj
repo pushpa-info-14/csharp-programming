@@ -8,18 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="DesignPatterns\Creational\Singleton\Docs\singleton vs static.md" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="DesignPatterns\Creational\Singleton\Docs\singleton vs static.md" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
     <PackageReference Include="FluentValidation" Version="11.9.0" />
     <PackageReference Include="RestSharp" Version="110.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="sample-appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
