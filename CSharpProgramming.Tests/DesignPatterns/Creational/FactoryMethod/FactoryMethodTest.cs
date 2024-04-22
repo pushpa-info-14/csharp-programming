@@ -1,9 +1,5 @@
-using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.CreditCard;
-using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.DocumentFormatConverter;
-using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.LogisticApplication;
-using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.NotificationSystem;
-using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.PaymentGatewayIntegration;
-using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples.ReportGenerator;
+using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod;
+using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.FactoryMethod
 {
@@ -30,7 +26,7 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.FactoryMethod
             new AnalyticsServiceProgram().Test();
 
             Console.WriteLine("\n---- ECommercePlatform");
-            new ECommercePlatformProgram().Test();
+            new PaymentGatewayIntegrationProgram().Test();
 
             Console.WriteLine("\n---- Transport");
             new TransportProgram().Test();
