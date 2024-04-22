@@ -1,9 +1,16 @@
 ﻿using RestSharp;
 
-namespace CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.RestSharpForApiRequests
+namespace CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples
 {
     public class RestSharpProgram
     {
+        public class User
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            //... Other properties
+        }
+
         public void Test()
         {
             var client = new RestClient("https://jsonplaceholder.typicode.com");

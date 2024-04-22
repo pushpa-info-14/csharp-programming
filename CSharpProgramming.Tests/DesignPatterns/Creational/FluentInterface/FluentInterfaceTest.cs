@@ -1,15 +1,5 @@
-using CSharpProgramming.Study.DesignPatterns.Creational.Builder.Examples.CreatingComplexProfileObjectsForAUserRegistrationSystem;
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.AutoMapperImplementationUsingFluentInterface;
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.EntityFrameworkCodeFirstModelPropertiesConfiguration;
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentEmailBuilder;
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentGameCharacterBuilder;
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentHtmlTagBuilder;
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentPizzaBuilder;
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentShoppingCartBuilder;
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentSqlQueryBuilder;
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.FluentValidation;
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples.RestSharpForApiRequests;
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.FluentEmployee;
+using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface;
+using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.FluentInterface
 {
