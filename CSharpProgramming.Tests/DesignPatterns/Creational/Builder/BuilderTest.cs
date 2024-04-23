@@ -1,11 +1,5 @@
-using CSharpProgramming.Study.DesignPatterns.Creational.Builder.BeverageBuilder;
-using CSharpProgramming.Study.DesignPatterns.Creational.Builder.Examples.BuildingAComplexComputerSystem;
-using CSharpProgramming.Study.DesignPatterns.Creational.Builder.Examples.BuildingASoftwareForARestaurant;
-using CSharpProgramming.Study.DesignPatterns.Creational.Builder.Examples.CreatingAConfigurationForAServerDeployment;
-using CSharpProgramming.Study.DesignPatterns.Creational.Builder.Examples.CreatingComplexProfileObjectsForAUserRegistrationSystem;
-using CSharpProgramming.Study.DesignPatterns.Creational.Builder.Examples.StringBuilder;
-using CSharpProgramming.Study.DesignPatterns.Creational.Builder.Examples.TravelAgencyWhereUsersCanCustomizeHolidayPackages;
-using CSharpProgramming.Study.DesignPatterns.Creational.Builder.ReportBuilder;
+using CSharpProgramming.Study.DesignPatterns.Creational.Builder;
+using CSharpProgramming.Study.DesignPatterns.Creational.Builder.Examples;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.Builder
 {
