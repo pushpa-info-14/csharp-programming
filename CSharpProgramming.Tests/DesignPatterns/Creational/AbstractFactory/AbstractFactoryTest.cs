@@ -1,15 +1,5 @@
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.AnimalKingdoms;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.Beverages;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformApplicationConfiguration;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.CrossPlatformUIDevelopment;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.DatabaseManager;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.FurnitureShop;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.MultiDeviceUserInterface;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.MultimediaSoftware;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.PaymentGatewaysInECommerce;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples.VehicleManufacturingCompany;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Institution;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.VehicleFactory;
+using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory;
+using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.AbstractFactory
 {
