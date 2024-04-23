@@ -20,4 +20,25 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DesignPatterns\Behavioral\Command\" />
+    <Folder Include="DesignPatterns\Behavioral\Iterator\" />
+    <Folder Include="DesignPatterns\Behavioral\Mediator\" />
+    <Folder Include="DesignPatterns\Behavioral\Memento\" />
+    <Folder Include="DesignPatterns\Behavioral\ChainOfResponsibility\" />
+    <Folder Include="DesignPatterns\Behavioral\Interpreter\" />
+    <Folder Include="DesignPatterns\Behavioral\Visitor\" />
+    <Folder Include="DesignPatterns\Behavioral\TemplateMethod\" />
+    <Folder Include="DesignPatterns\Behavioral\State\" />
+    <Folder Include="DesignPatterns\Behavioral\Observer\" />
+    <Folder Include="DesignPatterns\Behavioral\Strategy\" />
+    <Folder Include="DesignPatterns\Structural\Adapter\" />
+    <Folder Include="DesignPatterns\Structural\Facade\" />
+    <Folder Include="DesignPatterns\Structural\Decorator\" />
+    <Folder Include="DesignPatterns\Structural\Bridge\" />
+    <Folder Include="DesignPatterns\Structural\Composite\" />
+    <Folder Include="DesignPatterns\Structural\Flyweight\" />
+    <Folder Include="DesignPatterns\Structural\Proxy\" />
+  </ItemGroup>
+
 </Project>
