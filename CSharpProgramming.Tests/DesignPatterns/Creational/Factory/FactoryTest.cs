@@ -1,16 +1,5 @@
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples.ASimpleSystemToHandleNotifications;
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples.CloudStorageSystem;
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples.DesigningASystemForABank;
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples.DevelopingAGraphicsEditor;
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples.DiscountsInAnECommerceApplication;
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples.DocumentConversionSystem;
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples.LoggingSystem;
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples.PaymentGatewayIntegration;
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples.ReportGeneration;
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples.TransportApplication;
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples.UIThemeSystem;
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.With;
-using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Without;
+using CSharpProgramming.Study.DesignPatterns.Creational.Factory;
+using CSharpProgramming.Study.DesignPatterns.Creational.Factory.Examples;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.Factory
 {
@@ -24,11 +13,11 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.Factory
         [Test]
         public void Test1()
         {
-            Console.WriteLine("\n---- Without Factory");
+            Console.WriteLine("\n---- WithoutFactoryProgram");
             new WithoutFactoryProgram().Test();
 
-            Console.WriteLine("\n---- Factory");
-            new FactoryProgram().Test();
+            Console.WriteLine("\n---- WithFactoryProgram");
+            new WithFactoryProgram().Test();
 
             Console.WriteLine("\n---- Payment Gateway");
             new PaymentGatewayProgram().Test();
