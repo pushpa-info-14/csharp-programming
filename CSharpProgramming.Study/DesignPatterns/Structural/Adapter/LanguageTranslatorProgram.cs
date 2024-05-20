@@ -1,4 +1,4 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.Structural.Adapter.Examples
+﻿namespace CSharpProgramming.Study.DesignPatterns.Structural.Adapter
 {
     public class LanguageTranslatorProgram
     {

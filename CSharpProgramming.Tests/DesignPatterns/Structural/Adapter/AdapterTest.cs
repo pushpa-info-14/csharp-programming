@@ -1,5 +1,4 @@
 using CSharpProgramming.Study.DesignPatterns.Structural.Adapter;
-using CSharpProgramming.Study.DesignPatterns.Structural.Adapter.Examples;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Structural.Adapter
 {
