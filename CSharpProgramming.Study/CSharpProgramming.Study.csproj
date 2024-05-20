@@ -32,7 +32,6 @@
     <Folder Include="DesignPatterns\Behavioral\State\" />
     <Folder Include="DesignPatterns\Behavioral\Observer\" />
     <Folder Include="DesignPatterns\Behavioral\Strategy\" />
-    <Folder Include="DesignPatterns\Structural\Flyweight\" />
     <Folder Include="DesignPatterns\Structural\Proxy\" />
   </ItemGroup>
 
