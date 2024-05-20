@@ -1,6 +1,6 @@
 using CSharpProgramming.Study.DesignPatterns.Structural.Decorator;
 
-namespace CSharpProgramming.Tests.DesignPatterns.Structural.Adapter
+namespace CSharpProgramming.Tests.DesignPatterns.Structural.Decorator
 {
     public class DecoratorTest
     {

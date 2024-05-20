@@ -1,6 +1,6 @@
 using CSharpProgramming.Study.DesignPatterns.Structural.Bridge;
 
-namespace CSharpProgramming.Tests.DesignPatterns.Structural.Adapter
+namespace CSharpProgramming.Tests.DesignPatterns.Structural.Bridge
 {
     public class BridgeTest
     {

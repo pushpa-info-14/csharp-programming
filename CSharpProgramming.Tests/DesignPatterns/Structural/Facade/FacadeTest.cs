@@ -1,6 +1,6 @@
 using CSharpProgramming.Study.DesignPatterns.Structural.Facade;
 
-namespace CSharpProgramming.Tests.DesignPatterns.Structural.Adapter
+namespace CSharpProgramming.Tests.DesignPatterns.Structural.Facade
 {
     public class FacadeTest
     {
