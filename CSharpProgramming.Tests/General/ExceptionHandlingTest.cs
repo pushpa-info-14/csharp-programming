@@ -1,51 +1,46 @@
 using CSharpProgramming.Study.General;
+using Xunit;
 
-namespace CSharpProgramming.Tests.General
+namespace CSharpProgramming.Tests.General;
+
+public class ExceptionHandlingTest
 {
-    public class ExceptionHandlingTest
+    [Fact]
+    public void Test1()
     {
-        [SetUp]
-        public void Setup()
+        try
         {
+            ExceptionHandling.Hello1();
         }
-
-        [Test]
-        public void Test1()
+        catch (Exception e)
         {
-            try
-            {
-                ExceptionHandling.Hello1();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            Console.WriteLine(e.Message);
         }
+    }
 
-        [Test]
-        public void Test2()
+    [Fact]
+    public void Test2()
+    {
+        try
         {
-            try
-            {
-                ExceptionHandling.Hello2();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            ExceptionHandling.Hello2();
         }
-
-        [Test]
-        public void Test3()
+        catch (Exception e)
         {
-            try
-            {
-                ExceptionHandling.Hello3();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            Console.WriteLine(e.Message);
+        }
+    }
+
+    [Fact]
+    public void Test3()
+    {
+        try
+        {
+            ExceptionHandling.Hello3();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
         }
     }
 }

@@ -1,19 +1,14 @@
 ﻿using CSharpProgramming.Study.BroCode;
+using Xunit;
 
-namespace CSharpProgramming.Tests.BroCode
+namespace CSharpProgramming.Tests.BroCode;
+
+public class Lesson45GettersAndSettersTest
 {
-    public class Lesson45GettersAndSettersTest
+    [Fact]
+    public void Test1()
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        [Test]
-        public void Test1()
-        {
-            var lesson = new Lesson45GettersAndSetters();
-            lesson.Method1();
-        }
+        var lesson = new Lesson45GettersAndSetters();
+        lesson.Method1();
     }
 }

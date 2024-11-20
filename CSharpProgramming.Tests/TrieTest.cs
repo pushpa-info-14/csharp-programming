@@ -1,15 +1,11 @@
 using CSharpProgramming.Study.Leetcode75.Utils;
+using Xunit;
 
 namespace CSharpProgramming.Tests
 {
     public class TrieTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        [Test]
+        [Fact]
         public void Test1()
         {
             var node = new TrieNode();
@@ -18,24 +14,24 @@ namespace CSharpProgramming.Tests
             node.Insert("abcd");
             node.Insert("abab");
 
-            Assert.That(node.Search("abc"), Is.True);
-            Assert.That(node.Search("abcd"), Is.True);
-            Assert.That(node.Search("abab"), Is.True);
+            Assert.True(node.Search("abc"));
+            Assert.True(node.Search("abcd"));
+            Assert.True(node.Search("abab"));
 
             node.Remove("abab");
-            Assert.That(node.Search("abc"), Is.True);
-            Assert.That(node.Search("abcd"), Is.True);
-            Assert.That(node.Search("abab"), Is.False);
+            Assert.True(node.Search("abc"));
+            Assert.True(node.Search("abcd"));
+            Assert.False(node.Search("abab"));
 
             node.Remove("abcd");
-            Assert.That(node.Search("abc"), Is.True);
-            Assert.That(node.Search("abcd"), Is.False);
-            Assert.That(node.Search("abab"), Is.False);
+            Assert.True(node.Search("abc"));
+            Assert.False(node.Search("abcd"));
+            Assert.False(node.Search("abab"));
 
             node.Remove("abc");
-            Assert.That(node.Search("abc"), Is.False);
-            Assert.That(node.Search("abcd"), Is.False);
-            Assert.That(node.Search("abab"), Is.False);
+            Assert.False(node.Search("abc"));
+            Assert.False(node.Search("abcd"));
+            Assert.False(node.Search("abab"));
         }
     }
 }

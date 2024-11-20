@@ -1,19 +1,14 @@
 ﻿using CSharpProgramming.Study.BroCode;
+using Xunit;
 
-namespace CSharpProgramming.Tests.BroCode
+namespace CSharpProgramming.Tests.BroCode;
+
+public class Lesson21ForeachLoopTest
 {
-    public class Lesson21ForeachLoopTest
+    [Fact]
+    public void Test1()
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        [Test]
-        public void Test1()
-        {
-            var lesson = new Lesson21ForeachLoop();
-            lesson.Method1();
-        }
+        var lesson = new Lesson21ForeachLoop();
+        lesson.Method1();
     }
 }

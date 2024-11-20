@@ -1,19 +1,14 @@
 ﻿using CSharpProgramming.Study.BroCode;
+using Xunit;
 
-namespace CSharpProgramming.Tests.BroCode
+namespace CSharpProgramming.Tests.BroCode;
+
+public class Lesson42InterfacesTest
 {
-    public class Lesson42InterfacesTest
+    [Fact]
+    public void Test1()
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        [Test]
-        public void Test1()
-        {
-            var lesson = new Lesson42Interfaces();
-            lesson.Method1();
-        }
+        var lesson = new Lesson42Interfaces();
+        lesson.Method1();
     }
 }

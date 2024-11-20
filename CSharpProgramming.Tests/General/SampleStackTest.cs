@@ -1,19 +1,14 @@
 using CSharpProgramming.Study.General;
+using Xunit;
 
-namespace CSharpProgramming.Tests.General
+namespace CSharpProgramming.Tests.General;
+
+public class SampleStackTest
 {
-    public class SampleStackTest
+    [Fact]
+    public void Test1()
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        [Test]
-        public void Test1()
-        {
-            var sampleStack = new SampleStack();
-            sampleStack.Test();
-        }
+        var sampleStack = new SampleStack();
+        sampleStack.Test();
     }
 }

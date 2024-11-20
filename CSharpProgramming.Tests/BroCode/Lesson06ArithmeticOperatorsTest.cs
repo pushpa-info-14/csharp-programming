@@ -1,15 +1,11 @@
 ﻿using CSharpProgramming.Study.BroCode;
+using Xunit;
 
 namespace CSharpProgramming.Tests.BroCode
 {
     public class Lesson06ArithmeticOperatorsTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        [Test]
+        [Fact]
         public void Test1()
         {
             var lesson = new Lesson06ArithmeticOperators();

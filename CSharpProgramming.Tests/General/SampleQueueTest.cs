@@ -1,19 +1,14 @@
 using CSharpProgramming.Study.General;
+using Xunit;
 
-namespace CSharpProgramming.Tests.General
+namespace CSharpProgramming.Tests.General;
+
+public class SampleQueueTest
 {
-    public class SampleQueueTest
+    [Fact]
+    public void Test1()
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        [Test]
-        public void Test1()
-        {
-            var sampleQueue = new SampleQueue();
-            sampleQueue.Test();
-        }
+        var sampleQueue = new SampleQueue();
+        sampleQueue.Test();
     }
 }

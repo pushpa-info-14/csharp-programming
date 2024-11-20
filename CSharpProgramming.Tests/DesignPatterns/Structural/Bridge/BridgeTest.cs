@@ -1,22 +1,17 @@
 using CSharpProgramming.Study.DesignPatterns.Structural.Bridge;
+using Xunit;
 
-namespace CSharpProgramming.Tests.DesignPatterns.Structural.Bridge
+namespace CSharpProgramming.Tests.DesignPatterns.Structural.Bridge;
+
+public class BridgeTest
 {
-    public class BridgeTest
+    [Fact]
+    public void Test1()
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
+        Console.WriteLine("\n---- RemoteControlProgram");
+        new RemoteControlProgram().Test();
 
-        [Test]
-        public void Test1()
-        {
-            Console.WriteLine("\n---- RemoteControlProgram");
-            new RemoteControlProgram().Test();
-
-            Console.WriteLine("\n---- SendMessageProgram");
-            new SendMessageProgram().Test();
-        }
+        Console.WriteLine("\n---- SendMessageProgram");
+        new SendMessageProgram().Test();
     }
 }

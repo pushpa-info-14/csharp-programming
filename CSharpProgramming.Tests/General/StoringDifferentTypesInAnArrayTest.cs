@@ -1,26 +1,21 @@
 using CSharpProgramming.Study.General;
+using Xunit;
 
-namespace CSharpProgramming.Tests.General
+namespace CSharpProgramming.Tests.General;
+
+public class StoringDifferentTypesInAnArrayTest
 {
-    public class StoringDifferentTypesInAnArrayTest
+    [Fact]
+    public void Test1()
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
+        var instance = new StoringDifferentTypesInAnArray();
+        instance.Method1();
+    }
 
-        [Test]
-        public void Test1()
-        {
-            var instance = new StoringDifferentTypesInAnArray();
-            instance.Method1();
-        }
-
-        [Test]
-        public void Test2()
-        {
-            var instance = new StoringDifferentTypesInAnArray();
-            instance.Method2();
-        }
+    [Fact]
+    public void Test2()
+    {
+        var instance = new StoringDifferentTypesInAnArray();
+        instance.Method2();
     }
 }

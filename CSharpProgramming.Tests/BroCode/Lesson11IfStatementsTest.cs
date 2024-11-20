@@ -1,22 +1,17 @@
 ﻿using CSharpProgramming.Study.BroCode;
+using Xunit;
 
-namespace CSharpProgramming.Tests.BroCode
+namespace CSharpProgramming.Tests.BroCode;
+
+public class Lesson11IfStatementsTest
 {
-    public class Lesson11IfStatementsTest
+    [Fact]
+    public void Test1()
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
+        var lesson = new Lesson11IfStatements();
 
-        [Test]
-        public void Test1()
-        {
-            var lesson = new Lesson11IfStatements();
-
-            using var sr = new StringReader("30");
-            Console.SetIn(sr);
-            lesson.Method1();
-        }
+        using var sr = new StringReader("30");
+        Console.SetIn(sr);
+        lesson.Method1();
     }
 }

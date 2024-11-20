@@ -1,15 +1,11 @@
 ﻿using CSharpProgramming.Study.BroCode;
+using Xunit;
 
 namespace CSharpProgramming.Tests.BroCode
 {
     public class Lesson09HypotenuseCalculatorProgramTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        [Test]
+        [Fact]
         public void Test1()
         {
             var lesson = new Lesson09HypotenuseCalculatorProgram();

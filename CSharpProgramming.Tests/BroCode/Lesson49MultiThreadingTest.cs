@@ -1,19 +1,14 @@
 ﻿using CSharpProgramming.Study.BroCode;
+using Xunit;
 
-namespace CSharpProgramming.Tests.BroCode
+namespace CSharpProgramming.Tests.BroCode;
+
+public class Lesson49MultiThreadingTest
 {
-    public class Lesson49MultiThreadingTest
+    [Fact]
+    public void Test1()
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        [Test]
-        public void Test1()
-        {
-            var lesson = new Lesson49MultiThreading();
-            lesson.Method1();
-        }
+        var lesson = new Lesson49MultiThreading();
+        lesson.Method1();
     }
 }

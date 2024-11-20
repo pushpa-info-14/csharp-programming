@@ -1,16 +1,13 @@
 ﻿using CSharpProgramming.Study.BroCode;
+using Xunit;
 
 namespace CSharpProgramming.Tests.BroCode
 {
     public class Lesson05UserInputTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        [TestCase("Pushpa\n30")]
-        [TestCase("Kumara\n35")]
+        [Theory]
+        [InlineData("Pushpa\n30")]
+        [InlineData("Kumara\n35")]
         public void Test1(string input)
         {
             var lesson = new Lesson05UserInput();
