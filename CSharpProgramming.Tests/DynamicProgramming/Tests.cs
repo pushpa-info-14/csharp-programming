@@ -72,4 +72,50 @@ public class Tests
         _outputHelper.WriteLine(longestCommonPrefix.Solution(["flower", "flow", "flight"]) + "");
         _outputHelper.WriteLine(longestCommonPrefix.Solution(["a"]) + "");
     }
+
+    [Fact]
+    public void GitDiff()
+    {
+        PrintDifference(["a", "b", "c", "d", "e"], ["a", "c", "e"]);
+    }
+
+    private void PrintDifference(string[] fileA, string[] fileB)
+    {
+        var gitDiff = new GitDiff();
+
+        var dp = gitDiff.Calculate(fileA, fileB);
+        var lcs = gitDiff.ReconstructElements(dp, fileA, fileB);
+
+        var lineA = 0;
+        var lineB = 0;
+
+        foreach (var line in lcs)
+        {
+            while (fileA[lineA] != line)
+            {
+                _outputHelper.WriteLine($"- {fileA[lineA]}");
+                lineA++;
+            }
+            while (fileB[lineB] != line)
+            {
+                _outputHelper.WriteLine($"+ {fileB[lineB]}");
+                lineB++;
+            }
+
+            _outputHelper.WriteLine($"  {fileA[lineA]}");
+            lineA++;
+            lineB++;
+        }
+
+        while (lineA < fileA.Length)
+        {
+            _outputHelper.WriteLine($"- {fileA[lineA]}");
+            lineA++;
+        }
+        while (lineB < fileB.Length)
+        {
+            _outputHelper.WriteLine($"+ {fileB[lineB]}");
+            lineB++;
+        }
+    }
 }
