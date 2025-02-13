@@ -1,4 +1,4 @@
-﻿using CSharpProgramming.Tests.Base;
+﻿using CSharpProgramming.Tests.LeetCode.Base;
 using CSharpProgramming.Tests.LeetCode.Common;
 using Xunit;
 using Xunit.Abstractions;
@@ -63,12 +63,6 @@ public class Q2AddTwoNumbers : BaseTest
 
         var res = AddTwoNumbers(l1, l2);
 
-        var cur = res;
-        while (cur != null)
-        {
-            WriteLine(cur.val);
-            cur = cur.next;
-        }
-
+        PrintListNodes(res);
     }
 }

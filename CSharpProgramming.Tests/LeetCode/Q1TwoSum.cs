@@ -1,6 +1,6 @@
 ﻿// Ignore Spelling: nums
 
-using CSharpProgramming.Tests.Base;
+using CSharpProgramming.Tests.LeetCode.Base;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -31,8 +31,8 @@ public class Q1TwoSum(ITestOutputHelper output) : BaseTest(output)
     [Fact]
     public void Test()
     {
-        WriteLine(TwoSum([2, 7, 11, 15], 9));
-        WriteLine(TwoSum([3, 2, 4], 6));
-        WriteLine(TwoSum([3, 3], 6));
+        Print(TwoSum([2, 7, 11, 15], 9));
+        Print(TwoSum([3, 2, 4], 6));
+        Print(TwoSum([3, 3], 6));
     }
 }
