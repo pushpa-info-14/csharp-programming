@@ -8,35 +8,31 @@ namespace CSharpProgramming.Tests.LeetCode;
 
 public class Q1TwoSum(ITestOutputHelper output) : BaseTest(output)
 {
-    public class Solution
+    public int[] TwoSum(int[] nums, int target)
     {
-        public int[] TwoSum(int[] nums, int target)
+        var res = new int[2];
+
+        Dictionary<int, int> map = new Dictionary<int, int>();
+
+        for (int i = 0; i < nums.Length; i++)
         {
-            var res = new int[2];
-
-            Dictionary<int, int> map = new Dictionary<int, int>();
-
-            for (int i = 0; i < nums.Length; i++)
+            if (map.TryGetValue(nums[i], out var index))
             {
-                if (map.TryGetValue(nums[i], out var index))
-                {
-                    res[0] = index;
-                    res[1] = i;
-                    return res;
-                }
-                map[target - nums[i]] = i;
+                res[0] = index;
+                res[1] = i;
+                return res;
             }
-
-            return res;
+            map[target - nums[i]] = i;
         }
+
+        return res;
     }
 
     [Fact]
     public void Test()
     {
-        Solution s = new Solution();
-        WriteLine(s.TwoSum([2, 7, 11, 15], 9));
-        WriteLine(s.TwoSum([3, 2, 4], 6));
-        WriteLine(s.TwoSum([3, 3], 6));
+        WriteLine(TwoSum([2, 7, 11, 15], 9));
+        WriteLine(TwoSum([3, 2, 4], 6));
+        WriteLine(TwoSum([3, 3], 6));
     }
 }
