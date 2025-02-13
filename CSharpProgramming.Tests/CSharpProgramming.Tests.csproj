@@ -33,4 +33,13 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="LeetCode\Q3000-3500\" />
+    <Folder Include="LeetCode\Q2500-3000\" />
+    <Folder Include="LeetCode\Q2000-2500\" />
+    <Folder Include="LeetCode\Q0500-1000\" />
+    <Folder Include="LeetCode\Q1500-2000\" />
+    <Folder Include="LeetCode\Q1000-1500\" />
+  </ItemGroup>
+
 </Project>
