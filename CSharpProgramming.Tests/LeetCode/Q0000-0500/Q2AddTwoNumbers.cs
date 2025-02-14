@@ -3,7 +3,7 @@ using CSharpProgramming.Tests.LeetCode.Common;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace CSharpProgramming.Tests.LeetCode;
+namespace CSharpProgramming.Tests.LeetCode.Q0000_0500;
 
 public class Q2AddTwoNumbers(ITestOutputHelper output) : BaseTest(output)
 {

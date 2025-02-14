@@ -4,7 +4,7 @@ using CSharpProgramming.Tests.LeetCode.Base;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace CSharpProgramming.Tests.LeetCode;
+namespace CSharpProgramming.Tests.LeetCode.Q0000_0500;
 
 public class Q1TwoSum(ITestOutputHelper output) : BaseTest(output)
 {
