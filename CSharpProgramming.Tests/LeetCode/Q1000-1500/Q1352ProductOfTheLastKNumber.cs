@@ -18,7 +18,7 @@ public class Q1352ProductOfTheLastKNumber(ITestOutputHelper output) : BaseTest(o
 
         public void Add(int num)
         {
-            _previous = _previous * num;
+            _previous *= num;
             if (_previous == 0)
             {
                 _prefixProducts = [num];
