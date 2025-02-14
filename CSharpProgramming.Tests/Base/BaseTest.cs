@@ -2,7 +2,7 @@
 using System.Text.Json;
 using Xunit.Abstractions;
 
-namespace CSharpProgramming.Tests.LeetCode.Base;
+namespace CSharpProgramming.Tests.Base;
 
 public class BaseTest
 {
@@ -11,6 +11,11 @@ public class BaseTest
     public BaseTest(ITestOutputHelper output)
     {
         _output = output;
+    }
+
+    public void WriteLine(string s)
+    {
+        _output.WriteLine(s);
     }
 
     public void Print(object s)

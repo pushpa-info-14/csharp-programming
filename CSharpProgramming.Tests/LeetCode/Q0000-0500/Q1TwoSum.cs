@@ -1,6 +1,6 @@
 ﻿// Ignore Spelling: nums
 
-using CSharpProgramming.Tests.LeetCode.Base;
+using CSharpProgramming.Tests.Base;
 using Xunit;
 using Xunit.Abstractions;
 

@@ -1,4 +1,4 @@
-﻿using CSharpProgramming.Tests.LeetCode.Base;
+﻿using CSharpProgramming.Tests.Base;
 using CSharpProgramming.Tests.LeetCode.Common;
 using Xunit;
 using Xunit.Abstractions;
