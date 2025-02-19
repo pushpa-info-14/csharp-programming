@@ -51,7 +51,6 @@ public class Q39CombinationSum(ITestOutputHelper output) : BaseTest(output)
                 }
                 if (target < 0 || index == n) return;
 
-
                 var candidate = candidates[index];
                 cur.Add(candidate);
                 Backtrack(index, target - candidate);

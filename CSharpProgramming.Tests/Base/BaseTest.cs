@@ -6,21 +6,21 @@ namespace CSharpProgramming.Tests.Base;
 
 public class BaseTest
 {
-    private readonly ITestOutputHelper _output;
+    public readonly ITestOutputHelper output;
 
     public BaseTest(ITestOutputHelper output)
     {
-        _output = output;
+        this.output = output;
     }
 
     public void WriteLine(string s)
     {
-        _output.WriteLine(s);
+        output.WriteLine(s);
     }
 
     public void Print(object s)
     {
-        _output.WriteLine(JsonSerializer.Serialize(s));
+        output.WriteLine(JsonSerializer.Serialize(s));
     }
 
     public void PrintListNodes(ListNode listNode)
@@ -34,6 +34,6 @@ public class BaseTest
             cur = cur.next;
         }
 
-        _output.WriteLine(JsonSerializer.Serialize(res));
+        output.WriteLine(JsonSerializer.Serialize(res));
     }
 }
