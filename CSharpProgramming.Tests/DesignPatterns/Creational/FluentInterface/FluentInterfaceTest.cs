@@ -19,7 +19,7 @@ public class FluentInterfaceTest
 		FluentValidationProgram.Test();
 
 		Console.WriteLine("\n---- RestSharp");
-		RestSharpProgram.Test();
+		RestSharpProgram.TestAsync();
 
 		Console.WriteLine("\n---- SqlQueryBuilder");
 		SqlQueryBuilderProgram.Test();

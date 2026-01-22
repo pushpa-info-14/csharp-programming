@@ -1,4 +1,4 @@
-﻿using RestSharp;
+﻿using System.Net.Http.Json;
 
 namespace CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples;
 
@@ -13,20 +13,29 @@ public class RestSharpProgram
 		//... Other properties
 	}
 
-	public static void Test()
+	public static async Task TestAsync()
 	{
-		var client = new RestClient("https://jsonplaceholder.typicode.com");
-		var request = new RestRequest("users/{id}", Method.Get)
-			.AddUrlSegment("id", 1);
-		RestResponse<User> response = client.Execute<User>(request);
-
-		if (response.StatusCode == System.Net.HttpStatusCode.OK)
+		using var client = new HttpClient
 		{
-			Console.WriteLine($"User ID: {response.Data!.Id}, User Name: {response.Data.Name}");
+			BaseAddress = new Uri("https://jsonplaceholder.typicode.com/")
+		};
+
+		int id = 1;
+
+		HttpResponseMessage response = await client.GetAsync($"users/{id}");
+
+		if (response.IsSuccessStatusCode)
+		{
+			User? user = await response.Content.ReadFromJsonAsync<User>();
+
+			if (user != null)
+			{
+				Console.WriteLine($"User ID: {user.Id}, User Name: {user.Name}");
+			}
 		}
 		else
 		{
-			Console.WriteLine($"Error: {response.StatusDescription}");
+			Console.WriteLine($"Error: {(int)response.StatusCode} - {response.ReasonPhrase}");
 		}
 	}
 }
