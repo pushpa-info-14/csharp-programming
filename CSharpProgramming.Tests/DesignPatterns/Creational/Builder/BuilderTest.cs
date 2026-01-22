@@ -1,5 +1,5 @@
-using CSharpProgramming.Study.DesignPatterns.Creational.Builder;
-using CSharpProgramming.Study.DesignPatterns.Creational.Builder.Examples;
+using CSharpProgramming.Study.DesignPatterns.O1_Creational.O4_Builder;
+using CSharpProgramming.Study.DesignPatterns.O1_Creational.O4_Builder.Examples;
 using Xunit;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.Builder;

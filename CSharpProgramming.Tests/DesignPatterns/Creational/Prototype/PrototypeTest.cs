@@ -1,5 +1,5 @@
-using CSharpProgramming.Study.DesignPatterns.Creational.Prototype;
-using CSharpProgramming.Study.DesignPatterns.Creational.Prototype.Examples;
+using CSharpProgramming.Study.DesignPatterns.O1_Creational.O6_Prototype;
+using CSharpProgramming.Study.DesignPatterns.O1_Creational.O6_Prototype.Examples;
 using Xunit;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.Prototype;

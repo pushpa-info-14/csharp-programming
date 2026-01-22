@@ -1,5 +1,5 @@
-using CSharpProgramming.Study.DesignPatterns.Creational.Singleton;
-using CSharpProgramming.Study.DesignPatterns.Creational.Singleton.Examples;
+using CSharpProgramming.Study.DesignPatterns.O1_Creational.O7_Singleton;
+using CSharpProgramming.Study.DesignPatterns.O1_Creational.O7_Singleton.Examples;
 using Xunit;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.Singleton;

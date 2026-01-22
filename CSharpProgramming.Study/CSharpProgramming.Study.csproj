@@ -20,17 +20,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DesignPatterns\Behavioral\Command\" />
-    <Folder Include="DesignPatterns\Behavioral\Iterator\" />
-    <Folder Include="DesignPatterns\Behavioral\Mediator\" />
-    <Folder Include="DesignPatterns\Behavioral\Memento\" />
-    <Folder Include="DesignPatterns\Behavioral\ChainOfResponsibility\" />
-    <Folder Include="DesignPatterns\Behavioral\Interpreter\" />
-    <Folder Include="DesignPatterns\Behavioral\Visitor\" />
-    <Folder Include="DesignPatterns\Behavioral\TemplateMethod\" />
-    <Folder Include="DesignPatterns\Behavioral\State\" />
-    <Folder Include="DesignPatterns\Behavioral\Observer\" />
-    <Folder Include="DesignPatterns\Behavioral\Strategy\" />
+    <Folder Include="DesignPatterns\O3_Behavioral\Command\" />
+    <Folder Include="DesignPatterns\O3_Behavioral\Iterator\" />
+    <Folder Include="DesignPatterns\O3_Behavioral\Mediator\" />
+    <Folder Include="DesignPatterns\O3_Behavioral\Memento\" />
+    <Folder Include="DesignPatterns\O3_Behavioral\ChainOfResponsibility\" />
+    <Folder Include="DesignPatterns\O3_Behavioral\Interpreter\" />
+    <Folder Include="DesignPatterns\O3_Behavioral\Visitor\" />
+    <Folder Include="DesignPatterns\O3_Behavioral\TemplateMethod\" />
+    <Folder Include="DesignPatterns\O3_Behavioral\State\" />
+    <Folder Include="DesignPatterns\O3_Behavioral\Observer\" />
+    <Folder Include="DesignPatterns\O3_Behavioral\Strategy\" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,5 @@
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface;
-using CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples;
+using CSharpProgramming.Study.DesignPatterns.O1_Creational.O5_FluentInterface;
+using CSharpProgramming.Study.DesignPatterns.O1_Creational.O5_FluentInterface.Examples;
 using Xunit;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.FluentInterface;

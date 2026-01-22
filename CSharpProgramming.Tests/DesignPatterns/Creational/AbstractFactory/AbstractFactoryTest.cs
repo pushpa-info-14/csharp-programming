@@ -1,5 +1,5 @@
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory;
-using CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples;
+using CSharpProgramming.Study.DesignPatterns.O1_Creational.O3_AbstractFactory;
+using CSharpProgramming.Study.DesignPatterns.O1_Creational.O3_AbstractFactory.Examples;
 using Xunit;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.AbstractFactory;

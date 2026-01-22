@@ -1,5 +1,5 @@
-using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod;
-using CSharpProgramming.Study.DesignPatterns.Creational.FactoryMethod.Examples;
+using CSharpProgramming.Study.DesignPatterns.O1_Creational.O2_FactoryMethod;
+using CSharpProgramming.Study.DesignPatterns.O1_Creational.O2_FactoryMethod.Examples;
 using Xunit;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Creational.FactoryMethod;
