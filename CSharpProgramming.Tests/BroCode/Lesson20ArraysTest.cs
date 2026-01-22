@@ -5,10 +5,10 @@ namespace CSharpProgramming.Tests.BroCode;
 
 public class Lesson20ArraysTest
 {
-    [Fact]
-    public void Test1()
-    {
-        var lesson = new Lesson20Arrays();
-        lesson.Method1();
-    }
+	[Fact]
+	public void Test1()
+	{
+		var lesson = new Lesson20Arrays();
+		lesson.Method1();
+	}
 }

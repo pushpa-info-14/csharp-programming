@@ -6,39 +6,39 @@ namespace CSharpProgramming.Tests.InterviewQuestions;
 
 public class Q1FindParentDirectory : BaseTest
 {
-    public Q1FindParentDirectory(ITestOutputHelper output) : base(output)
-    {
-    }
+	public Q1FindParentDirectory(ITestOutputHelper output) : base(output)
+	{
+	}
 
-    public class Solution
-    {
-        public string FindParent(string pathInput)
-        {
-            var stack = new List<string>();
+	public class Solution
+	{
+		public string FindParent(string pathInput)
+		{
+			var stack = new List<string>();
 
-            var paths = pathInput.Split('\\');
+			var paths = pathInput.Split('\\');
 
-            foreach (var path in paths)
-            {
-                if (path == "..")
-                {
-                    stack.RemoveAt(stack.Count - 1);
-                }
-                else if (path.Length > 0)
-                {
-                    stack.Add(path);
-                }
-            }
+			foreach (var path in paths)
+			{
+				if (path == "..")
+				{
+					stack.RemoveAt(stack.Count - 1);
+				}
+				else if (path.Length > 0)
+				{
+					stack.Add(path);
+				}
+			}
 
-            return stack[stack.Count - 2];
-        }
-    }
+			return stack[stack.Count - 2];
+		}
+	}
 
-    [Fact]
-    public void Test()
-    {
+	[Fact]
+	public void Test()
+	{
 
-        /*
+		/*
         Example 1:
         Input: C:\temp\Share\abc
         Output: Share
@@ -60,11 +60,11 @@ public class Q1FindParentDirectory : BaseTest
         Input: C:\bmp\xyz\
         Output: bmp
         */
-        var s = new Solution();
-        WriteLine(s.FindParent("C:\\temp\\Share\\abc"));
-        WriteLine(s.FindParent("C:\\temp\\Demo\\Product\\..\\abc"));
-        WriteLine(s.FindParent("C:\\xyz\\source\\reviewed\\..\\..\\abc\\"));
-        WriteLine(s.FindParent("C:\\cloud\\simple\\..\\addon\\..\\abc\\"));
-        WriteLine(s.FindParent("C:\\temp\\..\\bmp\\feature\\..\\xyz\\"));
-    }
+		var s = new Solution();
+		WriteLine(s.FindParent("C:\\temp\\Share\\abc"));
+		WriteLine(s.FindParent("C:\\temp\\Demo\\Product\\..\\abc"));
+		WriteLine(s.FindParent("C:\\xyz\\source\\reviewed\\..\\..\\abc\\"));
+		WriteLine(s.FindParent("C:\\cloud\\simple\\..\\addon\\..\\abc\\"));
+		WriteLine(s.FindParent("C:\\temp\\..\\bmp\\feature\\..\\xyz\\"));
+	}
 }

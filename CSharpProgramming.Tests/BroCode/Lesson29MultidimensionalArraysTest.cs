@@ -5,10 +5,10 @@ namespace CSharpProgramming.Tests.BroCode;
 
 public class Lesson29MultidimensionalArraysTest
 {
-    [Fact]
-    public void Test1()
-    {
-        var lesson = new Lesson29MultidimensionalArrays();
-        lesson.Method1();
-    }
+	[Fact]
+	public void Test1()
+	{
+		var lesson = new Lesson29MultidimensionalArrays();
+		lesson.Method1();
+	}
 }

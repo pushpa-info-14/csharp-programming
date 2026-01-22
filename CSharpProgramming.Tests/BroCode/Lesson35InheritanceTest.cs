@@ -5,10 +5,10 @@ namespace CSharpProgramming.Tests.BroCode;
 
 public class Lesson35InheritanceTest
 {
-    [Fact]
-    public void Test1()
-    {
-        var lesson = new Lesson35Inheritance();
-        lesson.Method1();
-    }
+	[Fact]
+	public void Test1()
+	{
+		var lesson = new Lesson35Inheritance();
+		lesson.Method1();
+	}
 }

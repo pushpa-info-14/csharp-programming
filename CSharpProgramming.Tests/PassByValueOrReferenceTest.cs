@@ -5,14 +5,14 @@ namespace CSharpProgramming.Tests;
 
 public class PassByValueOrReferenceTest
 {
-    private readonly ITestOutputHelper _output;
+	private readonly ITestOutputHelper _output;
 
-    public PassByValueOrReferenceTest(ITestOutputHelper testOutputHelper)
-    {
-        _output = testOutputHelper;
-    }
+	public PassByValueOrReferenceTest(ITestOutputHelper testOutputHelper)
+	{
+		_output = testOutputHelper;
+	}
 
-    /**
+	/**
     public void DoSomething(Image image)
     {
         // This change won't be seen by the caller: it's changing the value
@@ -35,30 +35,30 @@ public class PassByValueOrReferenceTest
     }
     */
 
-    [Fact]
-    void Test()
-    {
-        void Method1(int a)
-        {
-            a = 20;
-            _output.WriteLine("Inside the method: " + a);
-        }
+	[Fact]
+	void Test()
+	{
+		void Method1(int a)
+		{
+			a = 20;
+			_output.WriteLine("Inside the method: " + a);
+		}
 
-        void Method2(ref int a)
-        {
-            a = 20;
-            _output.WriteLine("Inside the method: " + a);
-        }
+		void Method2(ref int a)
+		{
+			a = 20;
+			_output.WriteLine("Inside the method: " + a);
+		}
 
-        var number = 10;
-        var number2 = 30;
+		var number = 10;
+		var number2 = 30;
 
-        _output.WriteLine("Before: " + number);
-        Method1(number);
-        _output.WriteLine("After: " + number);
+		_output.WriteLine("Before: " + number);
+		Method1(number);
+		_output.WriteLine("After: " + number);
 
-        _output.WriteLine("Before: " + number2);
-        Method2(ref number2);
-        _output.WriteLine(number2 + "");
-    }
+		_output.WriteLine("Before: " + number2);
+		Method2(ref number2);
+		_output.WriteLine(number2 + "");
+	}
 }

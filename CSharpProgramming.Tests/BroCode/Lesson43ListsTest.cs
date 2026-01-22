@@ -5,10 +5,10 @@ namespace CSharpProgramming.Tests.BroCode;
 
 public class Lesson43ListsTest
 {
-    [Fact]
-    public void Test1()
-    {
-        var lesson = new Lesson43Lists();
-        lesson.Method1();
-    }
+	[Fact]
+	public void Test1()
+	{
+		var lesson = new Lesson43Lists();
+		lesson.Method1();
+	}
 }
