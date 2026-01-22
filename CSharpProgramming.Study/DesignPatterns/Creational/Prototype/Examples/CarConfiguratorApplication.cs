@@ -1,56 +1,58 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.Prototype.Examples
+﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.Prototype.Examples;
+
+public class CarConfiguratorApplication
 {
-    public class CarConfiguratorApplication
-    {
-        // Prototype - ICarPrototype Interface
-        public interface ICarPrototype
-        {
-            ICarPrototype Clone();
-        }
+	// Prototype - ICarPrototype Interface
+	public interface ICarPrototype
+	{
+		ICarPrototype Clone();
+	}
 
-        // Concrete Prototype - Car Class
-        public class Car : ICarPrototype
-        {
-            public string Model { get; set; }
-            public string Color { get; set; }
-            public string Engine { get; set; }
-            public bool Sunroof { get; set; }
+	// Concrete Prototype - Car Class
+	public class Car : ICarPrototype
+	{
+		public string Model { get; set; }
 
-            public ICarPrototype Clone()
-            {
-                // Using MemberwiseClone for simplicity, which is a shallow copy.
-                // For complex objects, you might need to implement a deep copy.
-                return (ICarPrototype)MemberwiseClone();
-            }
+		public string Color { get; set; }
 
-            public override string ToString()
-            {
-                return $"{Model} | Color: {Color} | Engine: {Engine} | Sunroof: {Sunroof}";
-            }
-        }
+		public string Engine { get; set; }
 
-        // Client Code
-        public void Test()
-        {
-            // Create an initial car configuration
-            var prototypeCar = new Car
-            {
-                Model = "Sedan",
-                Color = "Blue",
-                Engine = "V6",
-                Sunroof = true
-            };
+		public bool Sunroof { get; set; }
 
-            Console.WriteLine("Original Car Configuration:");
-            Console.WriteLine(prototypeCar);
+		public ICarPrototype Clone()
+		{
+			// Using MemberwiseClone for simplicity, which is a shallow copy.
+			// For complex objects, you might need to implement a deep copy.
+			return (ICarPrototype)MemberwiseClone();
+		}
 
-            // Now clone the prototype and make modifications for a new configuration
-            var clonedCar = (Car)prototypeCar.Clone();
-            clonedCar.Color = "Red";
-            clonedCar.Sunroof = false;
+		public override string ToString()
+		{
+			return $"{Model} | Color: {Color} | Engine: {Engine} | Sunroof: {Sunroof}";
+		}
+	}
 
-            Console.WriteLine("\nCloned and Modified Car Configuration:");
-            Console.WriteLine(clonedCar);
-        }
-    }
+	// Client Code
+	public static void Test()
+	{
+		// Create an initial car configuration
+		var prototypeCar = new Car
+		{
+			Model = "Sedan",
+			Color = "Blue",
+			Engine = "V6",
+			Sunroof = true
+		};
+
+		Console.WriteLine("Original Car Configuration:");
+		Console.WriteLine(prototypeCar);
+
+		// Now clone the prototype and make modifications for a new configuration
+		var clonedCar = (Car)prototypeCar.Clone();
+		clonedCar.Color = "Red";
+		clonedCar.Sunroof = false;
+
+		Console.WriteLine("\nCloned and Modified Car Configuration:");
+		Console.WriteLine(clonedCar);
+	}
 }

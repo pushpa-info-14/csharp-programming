@@ -1,69 +1,70 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.Prototype.Examples
+﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.Prototype.Examples;
+
+public class HistoricalStatesForUndoActions
 {
-    public class HistoricalStatesForUndoActions
-    {
-        // Prototype - IDocumentStatePrototype Interface
-        public interface IDocumentStatePrototype
-        {
-            IDocumentStatePrototype Clone();
-        }
+	// Prototype - IDocumentStatePrototype Interface
+	public interface IDocumentStatePrototype
+	{
+		IDocumentStatePrototype Clone();
+	}
 
-        // Concrete Prototype - DocumentState Class
-        public class DocumentState : IDocumentStatePrototype
-        {
-            public string Content { get; set; }
-            public string FontName { get; set; }
-            public int FontSize { get; set; }
+	// Concrete Prototype - DocumentState Class
+	public class DocumentState : IDocumentStatePrototype
+	{
+		public string Content { get; set; }
 
-            public IDocumentStatePrototype Clone()
-            {
-                return new DocumentState
-                {
-                    Content = Content,
-                    FontName = FontName,
-                    FontSize = FontSize
-                };
-            }
-        }
+		public string FontName { get; set; }
 
-        // Client Code
-        public void Test()
-        {
-            Stack<DocumentState> history = new();
+		public int FontSize { get; set; }
 
-            // Initial document state
-            var document = new DocumentState
-            {
-                Content = "Hello, world!",
-                FontName = "Arial",
-                FontSize = 12
-            };
+		public IDocumentStatePrototype Clone()
+		{
+			return new DocumentState
+			{
+				Content = Content,
+				FontName = FontName,
+				FontSize = FontSize
+			};
+		}
+	}
 
-            // Save initial state
-            history.Push((DocumentState)document.Clone());
+	// Client Code
+	public static void Test()
+	{
+		Stack<DocumentState> history = new();
 
-            // User changes the font
-            document.FontName = "Times New Roman";
+		// Initial document state
+		var document = new DocumentState
+		{
+			Content = "Hello, world!",
+			FontName = "Arial",
+			FontSize = 12
+		};
 
-            // Save state after changing font
-            history.Push((DocumentState)document.Clone());
+		// Save initial state
+		history.Push((DocumentState)document.Clone());
 
-            // User adds more content
-            document.Content += "\nAdding some more text.";
+		// User changes the font
+		document.FontName = "Times New Roman";
 
-            // Save state after adding more content
-            history.Push((DocumentState)document.Clone());
+		// Save state after changing font
+		history.Push((DocumentState)document.Clone());
 
-            // User decides to undo
-            if (history.Count > 0)
-            {
-                document = history.Pop();
-            }
+		// User adds more content
+		document.Content += "\nAdding some more text.";
 
-            // Display the document's state to simulate how it would appear in the editor
-            Console.WriteLine($"Content: {document.Content}");
-            Console.WriteLine($"Font: {document.FontName}");
-            Console.WriteLine($"Size: {document.FontSize}");
-        }
-    }
+		// Save state after adding more content
+		history.Push((DocumentState)document.Clone());
+
+		// User decides to undo
+		if (history.Count > 0)
+		{
+			document = history.Pop();
+		}
+
+		// Display the document's state to simulate how it would appear in the editor
+		Console.WriteLine($"Content: {document.Content}");
+		Console.WriteLine($"Font: {document.FontName}");
+		Console.WriteLine($"Size: {document.FontSize}");
+	}
 }

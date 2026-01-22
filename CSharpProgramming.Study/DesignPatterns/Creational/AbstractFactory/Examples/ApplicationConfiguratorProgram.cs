@@ -1,108 +1,110 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples
+﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples;
+
+public class ApplicationConfiguratorProgram
 {
-    public class ApplicationConfiguratorProgram
-    {
-        // Abstract Products
-        public interface INotificationService
-        {
-            void Notify(string message);
-        }
+	// Abstract Products
+	public interface INotificationService
+	{
+		void Notify(string message);
+	}
 
-        public interface ISettings
-        {
-            string GetSetting(string key);
-        }
+	public interface ISettings
+	{
+		string GetSetting(string key);
+	}
 
-        // Concrete Products for Android
-        public class AndroidNotificationService : INotificationService
-        {
-            public void Notify(string message)
-            {
-                Console.WriteLine($"Android notification: {message}");
-            }
-        }
+	// Concrete Products for Android
+	public class AndroidNotificationService : INotificationService
+	{
+		public void Notify(string message)
+		{
+			Console.WriteLine($"Android notification: {message}");
+		}
+	}
 
-        public class AndroidSettings : ISettings
-        {
-            public string GetSetting(string key)
-            {
-                return $"Android setting value for {key}";
-            }
-        }
+	public class AndroidSettings : ISettings
+	{
+		public string GetSetting(string key)
+		{
+			return $"Android setting value for {key}";
+		}
+	}
 
-        // Concrete Products for Ios
-        public class IosNotificationService : INotificationService
-        {
-            public void Notify(string message)
-            {
-                Console.WriteLine($"Ios notification: {message}");
-            }
-        }
+	// Concrete Products for Ios
+	public class IosNotificationService : INotificationService
+	{
+		public void Notify(string message)
+		{
+			Console.WriteLine($"Ios notification: {message}");
+		}
+	}
 
-        public class IosSettings : ISettings
-        {
-            public string GetSetting(string key)
-            {
-                return $"Ios setting value for {key}";
-            }
-        }
+	public class IosSettings : ISettings
+	{
+		public string GetSetting(string key)
+		{
+			return $"Ios setting value for {key}";
+		}
+	}
 
-        // Abstract Factory
-        public interface IPlatformFactory
-        {
-            INotificationService CreateNotificationService();
-            ISettings CreateSettings();
-        }
+	// Abstract Factory
+	public interface IPlatformFactory
+	{
+		INotificationService CreateNotificationService();
 
-        // Concrete Factories
-        public class AndroidFactory : IPlatformFactory
-        {
-            public INotificationService CreateNotificationService() => new AndroidNotificationService();
-            public ISettings CreateSettings() => new AndroidSettings();
-        }
+		ISettings CreateSettings();
+	}
 
-        public class IosFactory : IPlatformFactory
-        {
-            public INotificationService CreateNotificationService() => new IosNotificationService();
-            public ISettings CreateSettings() => new IosSettings();
-        }
+	// Concrete Factories
+	public class AndroidFactory : IPlatformFactory
+	{
+		public INotificationService CreateNotificationService() => new AndroidNotificationService();
 
-        // Client Code
-        public class ApplicationConfigurator
-        {
-            private readonly INotificationService _notificationService;
-            private readonly ISettings _settings;
+		public ISettings CreateSettings() => new AndroidSettings();
+	}
 
-            public ApplicationConfigurator(IPlatformFactory factory)
-            {
-                _notificationService = factory.CreateNotificationService();
-                _settings = factory.CreateSettings();
-            }
+	public class IosFactory : IPlatformFactory
+	{
+		public INotificationService CreateNotificationService() => new IosNotificationService();
 
-            public void RunSampleOperations()
-            {
-                string usernameSetting = _settings.GetSetting("Username");
-                Console.WriteLine($"Retrieved setting: {usernameSetting}");
+		public ISettings CreateSettings() => new IosSettings();
+	}
 
-                _notificationService.Notify("App started!");
-            }
-        }
+	// Client Code
+	public class ApplicationConfigurator
+	{
+		private readonly INotificationService _notificationService;
+		private readonly ISettings _settings;
 
-        public void Test()
-        {
-            IPlatformFactory platformFactory;
+		public ApplicationConfigurator(IPlatformFactory factory)
+		{
+			_notificationService = factory.CreateNotificationService();
+			_settings = factory.CreateSettings();
+		}
 
-            if (Environment.OSVersion.Platform == PlatformID.Unix) // A simplistic way to distinguish, not accurate for all scenarios
-            {
-                platformFactory = new IosFactory();
-            }
-            else
-            {
-                platformFactory = new AndroidFactory();
-            }
+		public void RunSampleOperations()
+		{
+			string usernameSetting = _settings.GetSetting("Username");
+			Console.WriteLine($"Retrieved setting: {usernameSetting}");
 
-            var appConfigurator = new ApplicationConfigurator(platformFactory);
-            appConfigurator.RunSampleOperations();
-        }
-    }
+			_notificationService.Notify("App started!");
+		}
+	}
+
+	public static void Test()
+	{
+		IPlatformFactory platformFactory;
+
+		if (Environment.OSVersion.Platform == PlatformID.Unix) // A simplistic way to distinguish, not accurate for all scenarios
+		{
+			platformFactory = new IosFactory();
+		}
+		else
+		{
+			platformFactory = new AndroidFactory();
+		}
+
+		var appConfigurator = new ApplicationConfigurator(platformFactory);
+		appConfigurator.RunSampleOperations();
+	}
 }

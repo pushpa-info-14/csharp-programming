@@ -6,43 +6,43 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.FluentInterface;
 
 public class FluentInterfaceTest
 {
-    [Fact]
-    public void Test1()
-    {
-        Console.WriteLine("\n---- FluentEmployee");
-        new FluentEmployeeProgram().Test();
+	[Fact]
+	public void Test1()
+	{
+		Console.WriteLine("\n---- FluentEmployee");
+		FluentEmployeeProgram.Test();
 
-        Console.WriteLine("\n---- AutoMapper");
-        new AutoMapperProgram().Test();
+		Console.WriteLine("\n---- AutoMapper");
+		AutoMapperProgram.Test();
 
-        Console.WriteLine("\n---- FluentValidation");
-        new FluentValidationProgram().Test();
+		Console.WriteLine("\n---- FluentValidation");
+		FluentValidationProgram.Test();
 
-        Console.WriteLine("\n---- RestSharp");
-        new RestSharpProgram().Test();
+		Console.WriteLine("\n---- RestSharp");
+		RestSharpProgram.Test();
 
-        Console.WriteLine("\n---- SqlQueryBuilder");
-        new SqlQueryBuilderProgram().Test();
+		Console.WriteLine("\n---- SqlQueryBuilder");
+		SqlQueryBuilderProgram.Test();
 
-        Console.WriteLine("\n---- HtmlTagBuilder");
-        new HtmlTagBuilderProgram().Test();
+		Console.WriteLine("\n---- HtmlTagBuilder");
+		HtmlTagBuilderProgram.Test();
 
-        Console.WriteLine("\n---- ShoppingCartBuilder");
-        new ShoppingCartBuilderProgram().Test();
+		Console.WriteLine("\n---- ShoppingCartBuilder");
+		ShoppingCartBuilderProgram.Test();
 
-        Console.WriteLine("\n---- UserProfileBuilder");
-        new UserProfileBuilderProgram().Test();
+		Console.WriteLine("\n---- UserProfileBuilder");
+		UserProfileBuilderProgram.Test();
 
-        Console.WriteLine("\n---- GameCharacterBuilder");
-        new GameCharacterBuilderProgram().Test();
+		Console.WriteLine("\n---- GameCharacterBuilder");
+		GameCharacterBuilderProgram.Test();
 
-        Console.WriteLine("\n---- PizzaBuilder");
-        new PizzaBuilderProgram().Test();
+		Console.WriteLine("\n---- PizzaBuilder");
+		PizzaBuilderProgram.Test();
 
-        Console.WriteLine("\n---- EntityFramework");
-        new EntityFrameworkProgram().Test();
+		Console.WriteLine("\n---- EntityFramework");
+		EntityFrameworkProgram.Test();
 
-        Console.WriteLine("\n---- EmailBuilder");
-        new EmailBuilderProgram().Test();
-    }
+		Console.WriteLine("\n---- EmailBuilder");
+		EmailBuilderProgram.Test();
+	}
 }

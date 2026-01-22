@@ -1,102 +1,104 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples
+﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.AbstractFactory.Examples;
+
+public class EcosystemProgram
 {
-    public class EcosystemProgram
-    {
-        // Abstract Products
-        public interface IHerbivore
-        {
-            void Graze();
-        }
+	// Abstract Products
+	public interface IHerbivore
+	{
+		void Graze();
+	}
 
-        public interface ICarnivore
-        {
-            void Hunt();
-        }
+	public interface ICarnivore
+	{
+		void Hunt();
+	}
 
-        // Concrete Products for Jungle
-        public class Deer : IHerbivore
-        {
-            public void Graze()
-            {
-                Console.WriteLine("Deer is grazing.");
-            }
-        }
+	// Concrete Products for Jungle
+	public class Deer : IHerbivore
+	{
+		public void Graze()
+		{
+			Console.WriteLine("Deer is grazing.");
+		}
+	}
 
-        public class Tiger : ICarnivore
-        {
-            public void Hunt()
-            {
-                Console.WriteLine("Tiger is hunting.");
-            }
-        }
+	public class Tiger : ICarnivore
+	{
+		public void Hunt()
+		{
+			Console.WriteLine("Tiger is hunting.");
+		}
+	}
 
-        // Concrete Products for Arctic
-        public class Reindeer : IHerbivore
-        {
-            public void Graze()
-            {
-                Console.WriteLine("Reindeer is grazing.");
-            }
-        }
+	// Concrete Products for Arctic
+	public class Reindeer : IHerbivore
+	{
+		public void Graze()
+		{
+			Console.WriteLine("Reindeer is grazing.");
+		}
+	}
 
-        public class PolarBear : ICarnivore
-        {
-            public void Hunt()
-            {
-                Console.WriteLine("Polar bear is hunting.");
-            }
-        }
+	public class PolarBear : ICarnivore
+	{
+		public void Hunt()
+		{
+			Console.WriteLine("Polar bear is hunting.");
+		}
+	}
 
-        // Abstract Factory
-        public interface IAnimalFactory
-        {
-            IHerbivore CreateHerbivore();
-            ICarnivore CreateCarnivore();
-        }
+	// Abstract Factory
+	public interface IAnimalFactory
+	{
+		IHerbivore CreateHerbivore();
 
-        // Concrete Factories
-        public class JungleAnimalFactory : IAnimalFactory
-        {
-            public IHerbivore CreateHerbivore() => new Deer();
-            public ICarnivore CreateCarnivore() => new Tiger();
-        }
+		ICarnivore CreateCarnivore();
+	}
 
-        public class ArcticAnimalFactory : IAnimalFactory
-        {
-            public IHerbivore CreateHerbivore() => new Reindeer();
-            public ICarnivore CreateCarnivore() => new PolarBear();
-        }
+	// Concrete Factories
+	public class JungleAnimalFactory : IAnimalFactory
+	{
+		public IHerbivore CreateHerbivore() => new Deer();
 
-        // Client Code
-        public class Ecosystem
-        {
-            private readonly IHerbivore _herbivore;
-            private readonly ICarnivore _carnivore;
+		public ICarnivore CreateCarnivore() => new Tiger();
+	}
 
-            public Ecosystem(IAnimalFactory factory)
-            {
-                _herbivore = factory.CreateHerbivore();
-                _carnivore = factory.CreateCarnivore();
-            }
+	public class ArcticAnimalFactory : IAnimalFactory
+	{
+		public IHerbivore CreateHerbivore() => new Reindeer();
 
-            public void RunFoodChain()
-            {
-                _herbivore.Graze();
-                _carnivore.Hunt();
-            }
-        }
+		public ICarnivore CreateCarnivore() => new PolarBear();
+	}
 
-        public void Test()
-        {
-            Console.WriteLine("Jungle Ecosystem:");
-            var jungleFactory = new JungleAnimalFactory();
-            var jungle = new Ecosystem(jungleFactory);
-            jungle.RunFoodChain();
+	// Client Code
+	public class Ecosystem
+	{
+		private readonly IHerbivore _herbivore;
+		private readonly ICarnivore _carnivore;
 
-            Console.WriteLine("Arctic Ecosystem:");
-            var arcticFactory = new ArcticAnimalFactory();
-            var arctic = new Ecosystem(arcticFactory);
-            arctic.RunFoodChain();
-        }
-    }
+		public Ecosystem(IAnimalFactory factory)
+		{
+			_herbivore = factory.CreateHerbivore();
+			_carnivore = factory.CreateCarnivore();
+		}
+
+		public void RunFoodChain()
+		{
+			_herbivore.Graze();
+			_carnivore.Hunt();
+		}
+	}
+
+	public static void Test()
+	{
+		Console.WriteLine("Jungle Ecosystem:");
+		var jungleFactory = new JungleAnimalFactory();
+		var jungle = new Ecosystem(jungleFactory);
+		jungle.RunFoodChain();
+
+		Console.WriteLine("Arctic Ecosystem:");
+		var arcticFactory = new ArcticAnimalFactory();
+		var arctic = new Ecosystem(arcticFactory);
+		arctic.RunFoodChain();
+	}
 }

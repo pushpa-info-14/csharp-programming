@@ -1,55 +1,55 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.Prototype.Examples
+﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.Prototype.Examples;
+
+public class DocumentVersioningSystem
 {
-    public class DocumentVersioningSystem
-    {
-        // Prototype - DocumentPrototype Interface
-        private interface IDocumentPrototype
-        {
-            IDocumentPrototype Clone();
-        }
+	// Prototype - DocumentPrototype Interface
+	private interface IDocumentPrototype
+	{
+		IDocumentPrototype Clone();
+	}
 
-        // Concrete Prototype - Document Class
-        private class Document : IDocumentPrototype
-        {
-            public string Title { get; set; }
-            public string Content { get; set; }
+	// Concrete Prototype - Document Class
+	private class Document : IDocumentPrototype
+	{
+		public string Title { get; set; }
 
-            public IDocumentPrototype Clone()
-            {
-                return new Document
-                {
-                    Title = Title,
-                    Content = Content
-                };
-            }
+		public string Content { get; set; }
 
-            public void Display()
-            {
-                Console.WriteLine($"Title: {Title}\nContent: {Content}\n");
-            }
-        }
+		public IDocumentPrototype Clone()
+		{
+			return new Document
+			{
+				Title = Title,
+				Content = Content
+			};
+		}
 
-        // Client Code
-        public void Test()
-        {
-            var originalDoc = new Document
-            {
-                Title = "Prototype Design Pattern",
-                Content = "This is a document explaining the prototype design pattern."
-            };
+		public void Display()
+		{
+			Console.WriteLine($"Title: {Title}\nContent: {Content}\n");
+		}
+	}
 
-            Console.WriteLine("Original Document:");
-            originalDoc.Display();
+	// Client Code
+	public static void Test()
+	{
+		var originalDoc = new Document
+		{
+			Title = "Prototype Design Pattern",
+			Content = "This is a document explaining the prototype design pattern."
+		};
 
-            // The user now edits the document.
-            var versionedDoc = (Document)originalDoc.Clone();
-            versionedDoc.Content += "\nNow, the content has been updated to include more details.";
+		Console.WriteLine("Original Document:");
+		originalDoc.Display();
 
-            Console.WriteLine("Versioned Document:");
-            versionedDoc.Display();
+		// The user now edits the document.
+		var versionedDoc = (Document)originalDoc.Clone();
+		versionedDoc.Content += "\nNow, the content has been updated to include more details.";
 
-            // The original document remains unchanged, but we have a new version saved.
-            // In reality, we might just save the delta (changes) for efficiency.
-        }
-    }
+		Console.WriteLine("Versioned Document:");
+		versionedDoc.Display();
+
+		// The original document remains unchanged, but we have a new version saved.
+		// In reality, we might just save the delta (changes) for efficiency.
+	}
 }

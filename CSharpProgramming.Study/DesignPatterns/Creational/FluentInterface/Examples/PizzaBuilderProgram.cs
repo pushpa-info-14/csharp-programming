@@ -1,57 +1,58 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples
+﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.FluentInterface.Examples;
+
+public class PizzaBuilderProgram
 {
-    public class PizzaBuilderProgram
-    {
-        public class Pizza
-        {
-            public string Size { get; set; }
-            public string Crust { get; set; }
-            public List<string> Toppings { get; } = new();
+	public class Pizza
+	{
+		public string Size { get; set; }
 
-            public override string ToString()
-            {
-                return $"{Size} inch {Crust} crust pizza with {string.Join(", ", Toppings)}";
-            }
-        }
+		public string Crust { get; set; }
 
-        public class PizzaBuilder
-        {
-            private readonly Pizza _pizza = new();
+		public List<string> Toppings { get; } = new();
 
-            public PizzaBuilder WithSize(string size)
-            {
-                _pizza.Size = size;
-                return this;
-            }
+		public override string ToString()
+		{
+			return $"{Size} inch {Crust} crust pizza with {string.Join(", ", Toppings)}";
+		}
+	}
 
-            public PizzaBuilder WithCrust(string crust)
-            {
-                _pizza.Crust = crust;
-                return this;
-            }
+	public class PizzaBuilder
+	{
+		private readonly Pizza _pizza = new();
 
-            public PizzaBuilder AddTopping(string topping)
-            {
-                _pizza.Toppings.Add(topping);
-                return this;
-            }
+		public PizzaBuilder WithSize(string size)
+		{
+			_pizza.Size = size;
+			return this;
+		}
 
-            public Pizza Build()
-            {
-                return _pizza;
-            }
-        }
+		public PizzaBuilder WithCrust(string crust)
+		{
+			_pizza.Crust = crust;
+			return this;
+		}
 
-        public void Test()
-        {
-            var builder = new PizzaBuilder();
-            var myPizza = builder.WithSize("12")
-                .WithCrust("thin")
-                .AddTopping("Mushrooms")
-                .AddTopping("Pepperoni")
-                .Build();
+		public PizzaBuilder AddTopping(string topping)
+		{
+			_pizza.Toppings.Add(topping);
+			return this;
+		}
 
-            Console.WriteLine(myPizza.ToString());
-        }
-    }
+		public Pizza Build()
+		{
+			return _pizza;
+		}
+	}
+
+	public static void Test()
+	{
+		var builder = new PizzaBuilder();
+		var myPizza = builder.WithSize("12")
+			.WithCrust("thin")
+			.AddTopping("Mushrooms")
+			.AddTopping("Pepperoni")
+			.Build();
+
+		Console.WriteLine(myPizza.ToString());
+	}
 }

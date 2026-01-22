@@ -6,49 +6,49 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.Prototype;
 
 public class PrototypeTest
 {
-    [Fact]
-    public void Test1()
-    {
-        Console.WriteLine("\n---- ObjectAssignmentExample");
-        new ObjectAssignmentExample().Test();
+	[Fact]
+	public void Test1()
+	{
+		Console.WriteLine("\n---- ObjectAssignmentExample");
+		ObjectAssignmentExample.Test();
 
-        Console.WriteLine("\n---- ShallowCopyExample");
-        new ShallowCopyExample().Test();
+		Console.WriteLine("\n---- ShallowCopyExample");
+		ShallowCopyExample.Test();
 
-        Console.WriteLine("\n---- EmployeeProgram");
-        new EmployeeProgram().Test();
+		Console.WriteLine("\n---- EmployeeProgram");
+		EmployeeProgram.Test();
 
-        Console.WriteLine("\n---- ShallowAndDeepCopyProgram");
-        new ShallowAndDeepCopyProgram().Test();
+		Console.WriteLine("\n---- ShallowAndDeepCopyProgram");
+		ShallowAndDeepCopyProgram.Test();
 
-        Console.WriteLine("\n---- CarConfiguratorApplication");
-        new CarConfiguratorApplication().Test();
+		Console.WriteLine("\n---- CarConfiguratorApplication");
+		CarConfiguratorApplication.Test();
 
-        Console.WriteLine("\n---- FloorPlanDesign");
-        new FloorPlanDesign().Test();
+		Console.WriteLine("\n---- FloorPlanDesign");
+		FloorPlanDesign.Test();
 
-        Console.WriteLine("\n---- DocumentVersioningSystem");
-        new DocumentVersioningSystem().Test();
+		Console.WriteLine("\n---- DocumentVersioningSystem");
+		DocumentVersioningSystem.Test();
 
-        Console.WriteLine("\n---- EventManagement");
-        new EventManagement().Test();
+		Console.WriteLine("\n---- EventManagement");
+		EventManagement.Test();
 
-        Console.WriteLine("\n---- UserCustomizableGuiSystem");
-        new UserCustomizableGuiSystem().Test();
+		Console.WriteLine("\n---- UserCustomizableGuiSystem");
+		UserCustomizableGuiSystem.Test();
 
-        Console.WriteLine("\n---- GraphicsEditors");
-        new GraphicsEditors().Test();
+		Console.WriteLine("\n---- GraphicsEditors");
+		GraphicsEditors.Test();
 
-        Console.WriteLine("\n---- DatabaseRecordDuplication");
-        new DatabaseRecordDuplication().Test();
+		Console.WriteLine("\n---- DatabaseRecordDuplication");
+		DatabaseRecordDuplication.Test();
 
-        Console.WriteLine("\n---- GameDevelopment");
-        new GameDevelopment().Test();
+		Console.WriteLine("\n---- GameDevelopment");
+		GameDevelopment.Test();
 
-        Console.WriteLine("\n---- ConfigurationTemplates");
-        new ConfigurationTemplates().Test();
+		Console.WriteLine("\n---- ConfigurationTemplates");
+		ConfigurationTemplates.Test();
 
-        Console.WriteLine("\n---- HistoricalStatesForUndoActions");
-        new HistoricalStatesForUndoActions().Test();
-    }
+		Console.WriteLine("\n---- HistoricalStatesForUndoActions");
+		HistoricalStatesForUndoActions.Test();
+	}
 }

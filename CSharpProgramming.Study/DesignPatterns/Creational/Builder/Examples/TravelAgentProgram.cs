@@ -1,81 +1,86 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.Builder.Examples
+﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.Builder.Examples;
+
+public class TravelAgentProgram
 {
-    public class TravelAgentProgram
-    {
-        public class HolidayPackage
-        {
-            public string Flight { get; set; }
-            public string Hotel { get; set; }
-            public string CarRental { get; set; }
-            public List<string> Excursions { get; } = new();
+	public class HolidayPackage
+	{
+		public string Flight { get; set; }
 
-            public void DisplayPackageDetails()
-            {
-                Console.WriteLine($"Flight: {Flight ?? "Not selected"}");
-                Console.WriteLine($"Hotel: {Hotel ?? "Not selected"}");
-                Console.WriteLine($"Car Rental: {CarRental ?? "Not selected"}");
-                Console.WriteLine("Excursions: " + (Excursions.Any() ? string.Join(", ", Excursions) : "No excursions selected"));
-            }
-        }
+		public string Hotel { get; set; }
 
-        public abstract class HolidayPackageBuilder
-        {
-            protected HolidayPackage Package { get; } = new();
+		public string CarRental { get; set; }
 
-            public abstract void BookFlight(string flightDetails);
-            public abstract void BookHotel(string hotelName);
-            public abstract void RentCar(string carDetails);
-            public abstract void AddExcursion(string excursion);
+		public List<string> Excursions { get; } = new();
 
-            public HolidayPackage GetPackage() => Package;
-        }
+		public void DisplayPackageDetails()
+		{
+			Console.WriteLine($"Flight: {Flight ?? "Not selected"}");
+			Console.WriteLine($"Hotel: {Hotel ?? "Not selected"}");
+			Console.WriteLine($"Car Rental: {CarRental ?? "Not selected"}");
+			Console.WriteLine("Excursions: " + (Excursions.Count != 0 ? string.Join(", ", Excursions) : "No excursions selected"));
+		}
+	}
 
-        public class CustomHolidayPackageBuilder : HolidayPackageBuilder
-        {
-            public override void BookFlight(string flightDetails)
-            {
-                Package.Flight = flightDetails;
-            }
+	public abstract class HolidayPackageBuilder
+	{
+		protected HolidayPackage Package { get; } = new();
 
-            public override void BookHotel(string hotelName)
-            {
-                Package.Hotel = hotelName;
-            }
+		public abstract void BookFlight(string flightDetails);
 
-            public override void RentCar(string carDetails)
-            {
-                Package.CarRental = carDetails;
-            }
+		public abstract void BookHotel(string hotelName);
 
-            public override void AddExcursion(string excursion)
-            {
-                Package.Excursions.Add(excursion);
-            }
-        }
+		public abstract void RentCar(string carDetails);
 
-        public class TravelAgent
-        {
-            public void CreatePackage(HolidayPackageBuilder builder, bool wantsFlight, bool wantsHotel, bool wantsCar, IEnumerable<string> excursions)
-            {
-                if (wantsFlight) builder.BookFlight("Flight details...");
-                if (wantsHotel) builder.BookHotel("Fancy Hotel");
-                if (wantsCar) builder.RentCar("SUV Model XYZ");
-                foreach (var excursion in excursions)
-                {
-                    builder.AddExcursion(excursion);
-                }
-            }
-        }
+		public abstract void AddExcursion(string excursion);
 
-        public void Test()
-        {
-            var travelAgent = new TravelAgent();
-            var packageBuilder = new CustomHolidayPackageBuilder();
+		public HolidayPackage GetPackage() => Package;
+	}
 
-            travelAgent.CreatePackage(packageBuilder, true, true, false, new[] { "Beach trip", "Mountain hiking" });
+	public class CustomHolidayPackageBuilder : HolidayPackageBuilder
+	{
+		public override void BookFlight(string flightDetails)
+		{
+			Package.Flight = flightDetails;
+		}
 
-            var holidayPackage = packageBuilder.GetPackage();
-            holidayPackage.DisplayPackageDetails();
-        }
-    }
+		public override void BookHotel(string hotelName)
+		{
+			Package.Hotel = hotelName;
+		}
+
+		public override void RentCar(string carDetails)
+		{
+			Package.CarRental = carDetails;
+		}
+
+		public override void AddExcursion(string excursion)
+		{
+			Package.Excursions.Add(excursion);
+		}
+	}
+
+	public class TravelAgent
+	{
+		public void CreatePackage(HolidayPackageBuilder builder, bool wantsFlight, bool wantsHotel, bool wantsCar, IEnumerable<string> excursions)
+		{
+			if (wantsFlight) builder.BookFlight("Flight details...");
+			if (wantsHotel) builder.BookHotel("Fancy Hotel");
+			if (wantsCar) builder.RentCar("SUV Model XYZ");
+			foreach (var excursion in excursions)
+			{
+				builder.AddExcursion(excursion);
+			}
+		}
+	}
+
+	public static void Test()
+	{
+		var travelAgent = new TravelAgent();
+		var packageBuilder = new CustomHolidayPackageBuilder();
+
+		travelAgent.CreatePackage(packageBuilder, true, true, false, ["Beach trip", "Mountain hiking"]);
+
+		var holidayPackage = packageBuilder.GetPackage();
+		holidayPackage.DisplayPackageDetails();
+	}
 }

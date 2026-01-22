@@ -6,46 +6,46 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.Factory;
 
 public class FactoryTest
 {
-    [Fact]
-    public void Test1()
-    {
-        Console.WriteLine("\n---- WithoutFactoryProgram");
-        new WithoutFactoryProgram().Test();
+	[Fact]
+	public void Test1()
+	{
+		Console.WriteLine("\n---- WithoutFactoryProgram");
+		WithoutFactoryProgram.Test();
 
-        Console.WriteLine("\n---- WithFactoryProgram");
-        new WithFactoryProgram().Test();
+		Console.WriteLine("\n---- WithFactoryProgram");
+		WithFactoryProgram.Test();
 
-        Console.WriteLine("\n---- Payment Gateway");
-        new PaymentGatewayProgram().Test();
+		Console.WriteLine("\n---- Payment Gateway");
+		PaymentGatewayProgram.Test();
 
-        Console.WriteLine("\n---- Document Converter");
-        new DocumentConverterProgram().Test();
+		Console.WriteLine("\n---- Document Converter");
+		DocumentConverterProgram.Test();
 
-        Console.WriteLine("\n---- Logger");
-        new LoggerProgram().Test();
+		Console.WriteLine("\n---- Logger");
+		LoggerProgram.Test();
 
-        Console.WriteLine("\n---- Notification");
-        new NotificationProgram().Test();
+		Console.WriteLine("\n---- Notification");
+		NotificationProgram.Test();
 
-        Console.WriteLine("\n---- Discount");
-        new DiscountProgram().Test();
+		Console.WriteLine("\n---- Discount");
+		DiscountProgram.Test();
 
-        Console.WriteLine("\n---- Transport");
-        new TransportProgram().Test();
+		Console.WriteLine("\n---- Transport");
+		TransportProgram.Test();
 
-        Console.WriteLine("\n---- Shape");
-        new ShapeProgram().Test();
+		Console.WriteLine("\n---- Shape");
+		ShapeProgram.Test();
 
-        Console.WriteLine("\n---- Account");
-        new AccountProgram().Test();
+		Console.WriteLine("\n---- Account");
+		AccountProgram.Test();
 
-        Console.WriteLine("\n---- Report");
-        new ReportProgram().Test();
+		Console.WriteLine("\n---- Report");
+		ReportProgram.Test();
 
-        Console.WriteLine("\n---- StorageProvider");
-        new StorageProviderProgram().Test();
+		Console.WriteLine("\n---- StorageProvider");
+		StorageProviderProgram.Test();
 
-        Console.WriteLine("\n---- Theme");
-        new ThemeProgram().Test();
-    }
+		Console.WriteLine("\n---- Theme");
+		ThemeProgram.Test();
+	}
 }

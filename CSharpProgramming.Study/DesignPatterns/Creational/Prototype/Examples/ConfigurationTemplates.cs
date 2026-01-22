@@ -1,62 +1,64 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.Prototype.Examples
+﻿namespace CSharpProgramming.Study.DesignPatterns.Creational.Prototype.Examples;
+
+public class ConfigurationTemplates
 {
-    public class ConfigurationTemplates
-    {
-        // Prototype - IConfigurationPrototype Interface
-        public interface IConfigurationPrototype
-        {
-            IConfigurationPrototype Clone();
-        }
+	// Prototype - IConfigurationPrototype Interface
+	public interface IConfigurationPrototype
+	{
+		IConfigurationPrototype Clone();
+	}
 
-        // Concrete Prototype - Configuration Class
-        public class Configuration : IConfigurationPrototype
-        {
-            public string DatabaseConnectionString { get; set; }
-            public int Timeout { get; set; }
-            public bool EnableLogging { get; set; }
-            public string ModuleName { get; set; }
+	// Concrete Prototype - Configuration Class
+	public class Configuration : IConfigurationPrototype
+	{
+		public string DatabaseConnectionString { get; set; }
 
-            public IConfigurationPrototype Clone()
-            {
-                return new Configuration
-                {
-                    DatabaseConnectionString = DatabaseConnectionString,
-                    Timeout = Timeout,
-                    EnableLogging = EnableLogging,
-                    // ModuleName can be set separately after cloning
-                    ModuleName = string.Empty
-                };
-            }
+		public int Timeout { get; set; }
 
-            public void Display()
-            {
-                Console.WriteLine($"Configuration for {ModuleName}:");
-                Console.WriteLine($"DB Connection: {DatabaseConnectionString} | Timeout: {Timeout}s | Logging: {EnableLogging}\n");
-            }
-        }
+		public bool EnableLogging { get; set; }
 
-        // Client Code
-        public void Test()
-        {
-            // Base configuration template prepared by the IT team
-            var baseConfig = new Configuration
-            {
-                DatabaseConnectionString = "Server=myServer;Database=myDB;User Id=myUser;Password=myPass;",
-                Timeout = 30,
-                EnableLogging = true,
-                ModuleName = "Base Configuration"
-            };
+		public string ModuleName { get; set; }
 
-            Console.WriteLine("Base Configuration:");
-            baseConfig.Display();
+		public IConfigurationPrototype Clone()
+		{
+			return new Configuration
+			{
+				DatabaseConnectionString = DatabaseConnectionString,
+				Timeout = Timeout,
+				EnableLogging = EnableLogging,
+				// ModuleName can be set separately after cloning
+				ModuleName = string.Empty
+			};
+		}
 
-            // Now, for a specific module called "PaymentProcessing", we want a similar configuration but with a longer timeout
-            var paymentConfig = (Configuration)baseConfig.Clone();
-            paymentConfig.Timeout = 60;
-            paymentConfig.ModuleName = "PaymentProcessing";
+		public void Display()
+		{
+			Console.WriteLine($"Configuration for {ModuleName}:");
+			Console.WriteLine($"DB Connection: {DatabaseConnectionString} | Timeout: {Timeout}s | Logging: {EnableLogging}\n");
+		}
+	}
 
-            Console.WriteLine("Payment Processing Module Configuration:");
-            paymentConfig.Display();
-        }
-    }
+	// Client Code
+	public static void Test()
+	{
+		// Base configuration template prepared by the IT team
+		var baseConfig = new Configuration
+		{
+			DatabaseConnectionString = "Server=myServer;Database=myDB;User Id=myUser;Password=myPass;",
+			Timeout = 30,
+			EnableLogging = true,
+			ModuleName = "Base Configuration"
+		};
+
+		Console.WriteLine("Base Configuration:");
+		baseConfig.Display();
+
+		// Now, for a specific module called "PaymentProcessing", we want a similar configuration but with a longer timeout
+		var paymentConfig = (Configuration)baseConfig.Clone();
+		paymentConfig.Timeout = 60;
+		paymentConfig.ModuleName = "PaymentProcessing";
+
+		Console.WriteLine("Payment Processing Module Configuration:");
+		paymentConfig.Display();
+	}
 }

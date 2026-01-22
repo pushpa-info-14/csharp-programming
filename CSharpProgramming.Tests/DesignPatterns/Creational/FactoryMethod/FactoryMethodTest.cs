@@ -6,25 +6,25 @@ namespace CSharpProgramming.Tests.DesignPatterns.Creational.FactoryMethod;
 
 public class FactoryMethodTest
 {
-    [Fact]
-    public void Test1()
-    {
-        Console.WriteLine("\n---- CreditCard");
-        new CreditCardProgram().Test();
+	[Fact]
+	public void Test1()
+	{
+		Console.WriteLine("\n---- CreditCard");
+		CreditCardProgram.Test();
 
-        Console.WriteLine("\n---- NotificationSystem");
-        new NotificationSystemProgram().Test();
+		Console.WriteLine("\n---- NotificationSystem");
+		NotificationSystemProgram.Test();
 
-        Console.WriteLine("\n---- DocumentService");
-        new DocumentServiceProgram().Test();
+		Console.WriteLine("\n---- DocumentService");
+		DocumentServiceProgram.Test();
 
-        Console.WriteLine("\n---- AnalyticsService");
-        new AnalyticsServiceProgram().Test();
+		Console.WriteLine("\n---- AnalyticsService");
+		AnalyticsServiceProgram.Test();
 
-        Console.WriteLine("\n---- ECommercePlatform");
-        new PaymentGatewayIntegrationProgram().Test();
+		Console.WriteLine("\n---- ECommercePlatform");
+		PaymentGatewayIntegrationProgram.Test();
 
-        Console.WriteLine("\n---- Transport");
-        new TransportProgram().Test();
-    }
+		Console.WriteLine("\n---- Transport");
+		TransportProgram.Test();
+	}
 }
