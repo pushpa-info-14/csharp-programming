@@ -25,8 +25,6 @@
     <Folder Include="DesignPatterns\O2_Structural\O7_Proxy\O6_MonitoringOrSynchronizationProxy\" />
     <Folder Include="DesignPatterns\O2_Structural\O7_Proxy\O5_LoggingProxy\" />
     <Folder Include="DesignPatterns\O2_Structural\O7_Proxy\O4_CacheProxy\" />
-    <Folder Include="DesignPatterns\O2_Structural\O7_Proxy\O2_RemoteProxy\" />
-    <Folder Include="DesignPatterns\O2_Structural\O7_Proxy\O1_VirtualProxy\" />
     <Folder Include="DesignPatterns\O3_Behavioral\Command\" />
     <Folder Include="DesignPatterns\O3_Behavioral\Iterator\" />
     <Folder Include="DesignPatterns\O3_Behavioral\Mediator\" />
