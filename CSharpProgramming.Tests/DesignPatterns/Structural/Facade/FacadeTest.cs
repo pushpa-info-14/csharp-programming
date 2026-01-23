@@ -1,4 +1,4 @@
-using CSharpProgramming.Study.DesignPatterns.Structural.Facade;
+using CSharpProgramming.Study.DesignPatterns.O2_Structural.O2_Facade;
 using Xunit;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Structural.Facade;

@@ -1,12 +1,15 @@
-﻿namespace CSharpProgramming.Study.DesignPatterns.O2_Structural.O7_Proxy;
+﻿namespace CSharpProgramming.Study.DesignPatterns.O2_Structural.O7_Proxy.O3_ProtectionProxy;
 
-public class ProtectionProxyFolderProxyProgram
+public class FolderProxyProgram
 {
 	public class Employee
 	{
 		public string Username { get; set; }
+
 		public string Password { get; set; }
+
 		public string Role { get; set; }
+
 		public Employee(string username, string password, string role)
 		{
 			Username = username;
@@ -37,12 +40,14 @@ public class ProtectionProxyFolderProxyProgram
 	// The Proxy has an interface identical to the RealSubject.
 	class SharedFolderProxy : ISharedFolder
 	{
-		private ISharedFolder _folder;
+		private SharedFolder _folder;
 		private readonly Employee _employee;
+
 		public SharedFolderProxy(Employee emp)
 		{
 			_employee = emp;
 		}
+
 		public void PerformReadWriteOperations()
 		{
 			if (_employee.Role.Equals("CEO", StringComparison.CurrentCultureIgnoreCase) || _employee.Role.Equals("MANAGER", StringComparison.CurrentCultureIgnoreCase))
@@ -58,7 +63,7 @@ public class ProtectionProxyFolderProxyProgram
 		}
 	}
 
-	public void Test()
+	public static void Test()
 	{
 		Console.WriteLine("Client passing employee with Role Developer to folder proxy");
 		var emp1 = new Employee("Anurag", "Anurag123", "Developer");

@@ -1,4 +1,4 @@
-using CSharpProgramming.Study.DesignPatterns.Structural.Flyweight;
+using CSharpProgramming.Study.DesignPatterns.O2_Structural.O6_Flyweight;
 using Xunit;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Structural.Flyweight;

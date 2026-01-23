@@ -1,4 +1,4 @@
-using CSharpProgramming.Study.DesignPatterns.Structural.Decorator;
+using CSharpProgramming.Study.DesignPatterns.O2_Structural.O3_Decorator;
 using Xunit;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Structural.Decorator;

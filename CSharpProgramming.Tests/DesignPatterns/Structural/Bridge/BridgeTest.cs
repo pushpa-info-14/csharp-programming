@@ -1,4 +1,4 @@
-using CSharpProgramming.Study.DesignPatterns.Structural.Bridge;
+using CSharpProgramming.Study.DesignPatterns.O2_Structural.O4_Bridge;
 using Xunit;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Structural.Bridge;

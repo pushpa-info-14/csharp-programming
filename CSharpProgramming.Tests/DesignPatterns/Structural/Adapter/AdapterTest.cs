@@ -1,4 +1,4 @@
-using CSharpProgramming.Study.DesignPatterns.Structural.Adapter;
+using CSharpProgramming.Study.DesignPatterns.O2_Structural.O1_Adapter;
 using Xunit;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Structural.Adapter;

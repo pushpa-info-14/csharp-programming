@@ -1,4 +1,4 @@
-using CSharpProgramming.Study.DesignPatterns.Structural.Composite;
+using CSharpProgramming.Study.DesignPatterns.O2_Structural.O5_Composite;
 using Xunit;
 
 namespace CSharpProgramming.Tests.DesignPatterns.Structural.Composite;
